@@ -26,7 +26,7 @@
     -> Running file indexController.aspx
 ```
 
-### mật khẩu và tên đăng nhập
+### Mật khẩu và tên đăng nhập
 ```js 
 
  tên đăng nhập 1 : tuong 
