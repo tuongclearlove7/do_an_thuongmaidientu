@@ -32,7 +32,28 @@ namespace do_an_thuongmaidientu.admin
             string mahang = btnXoa.CommandArgument;
             string sql1 = "DELETE FROM donhang WHERE donhang.mahang = " + mahang;
             ketnoi.capnhat(sql1);
-            Response.Redirect("timkiem.aspx?donhang=" + Request.QueryString["donhang"]);
+            string tendangnhap = Request.QueryString["donhang"];
+            loadDB(tendangnhap);
+            // Response.Redirect("timkiem.aspx?donhang=" + Request.QueryString["donhang"]);
+        }
+
+        protected void loadDB(String tendangnhap)
+        {
+            
+            string sql = "SELECT * FROM mathang, donhang WHERE mathang.mahang = donhang.mahang and donhang.tendangnhap = '" + tendangnhap + "' order by mathang.dongia asc";
+            ds_donhang.DataSource = ketnoi.docdulieu(sql);
+            ds_donhang.DataBind();
+            string sql3 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap = '" + tendangnhap + "'";
+            DataTable dt = new DataTable();
+            dt = ketnoi.docdulieu(sql3);
+            var tong = dt.Rows[0][0];
+
+            string sql_count = "select count(*) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap = '" + tendangnhap + "'";
+            DataTable dt_count = new DataTable();
+            dt_count = ketnoi.docdulieu(sql_count);
+            var count = dt_count.Rows[0][0];
+            dem_sodon.Text = "Số đơn hàng " + count;
+            tongthanhtien.Text = "Tổng thành tiền : " + tong;
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -47,8 +68,6 @@ namespace do_an_thuongmaidientu.admin
                         string tendangnhap = Request.QueryString["donhang"];
                         string sql = "SELECT * FROM mathang, donhang WHERE mathang.mahang = donhang.mahang and donhang.tendangnhap = '" + tendangnhap + "' order by mathang.dongia asc";
                         ds_donhang.DataSource = ketnoi.docdulieu(sql);
-                        ds_donhang.DataBind();
-
                         ds_donhang.DataBind();
                         string sql3 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap = '" + tendangnhap + "'";
                         DataTable dt = new DataTable();

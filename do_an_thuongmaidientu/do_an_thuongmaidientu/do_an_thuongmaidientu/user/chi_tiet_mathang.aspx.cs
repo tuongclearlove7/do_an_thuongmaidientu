@@ -23,14 +23,12 @@ namespace do_an_thuongmaidientu.user
                     if (Request.QueryString["MatHang"] != null)
                     {
                         string mahang = Request.QueryString["MatHang"];
-                        if (mahang == Request.QueryString["MatHang"])
-                        {
-                            string sql = "SELECT * FROM mathang WHERE " +
-                                         "mathang.mahang = " + mahang;
-                            ds_mathang.DataSource = ketnoi.docdulieu(sql);
-                            DataTable dt = ketnoi.docdulieu(sql);
-                            ds_mathang.DataBind();
-                        }
+                        string sql = "SELECT * FROM mathang WHERE " +
+                                        "mathang.mahang = " + mahang;
+                        ds_mathang.DataSource = ketnoi.docdulieu(sql);
+                        DataTable dt = ketnoi.docdulieu(sql);
+                        ds_mathang.DataBind();
+                        
                     }
                     else
                     {
@@ -44,9 +42,7 @@ namespace do_an_thuongmaidientu.user
             }
 
         }
-
-
-
+    
         protected void mua(object sender, EventArgs e)
         {
             string mahang = Request.QueryString["MatHang"];
@@ -85,7 +81,6 @@ namespace do_an_thuongmaidientu.user
                 ketnoi.capnhat(sql2);
 
             }
-            Thread.Sleep(1000);
             Response.Redirect("giohang.aspx");
 
         }

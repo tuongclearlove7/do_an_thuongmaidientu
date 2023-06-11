@@ -68,6 +68,7 @@ namespace do_an_thuongmaidientu.admin
             }
         }
 
+   
         protected void xoa(object sender, EventArgs e)
         {
             foreach (GridViewRow row in ds_donhang.Rows)
@@ -79,8 +80,7 @@ namespace do_an_thuongmaidientu.admin
                 string sql1 = "DELETE FROM donhang WHERE donhang.mahang = " + mahang + " AND donhang.tendangnhap = '" + tendangnhap + "'";
                 ketnoi.capnhat(sql1);
                 Response.Redirect("donhang.aspx");
-            }
-           
+            }   
         }
 
 

@@ -91,6 +91,28 @@ namespace do_an_thuongmaidientu.user
 
         }
 
+
+        protected void loadDB()
+        {
+            string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+            ds_donhang.DataSource = ketnoi.docdulieu(sql);
+            ds_donhang.DataBind();
+            if (ds_donhang.Rows.Count == 0)
+            {
+                ds_donhang = null;
+                Response.Redirect("giohang.aspx");
+            }
+            else
+            {
+                ds_donhang.DataBind();
+                string sql2 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                DataTable dt = new DataTable();
+                dt = ketnoi.docdulieu(sql2);
+                var tong = dt.Rows[0][0];
+                tongthanhtien.Text = "Tổng thành tiền : " + tong;
+            }
+        }
+
         protected void xoa(object sender, EventArgs e)
         {
 
@@ -129,7 +151,7 @@ namespace do_an_thuongmaidientu.user
                     ketnoi.capnhat(sql);
 
                 }
-                Response.Redirect("sua_xoa.aspx");
+                loadDB();
             }
         }
 
@@ -151,8 +173,7 @@ namespace do_an_thuongmaidientu.user
             string sql = "UPDATE donhang SET soluong = CASE mahang " + string.Join(" ", updateValues) + " END WHERE mahang IN (" +
                           string.Join(",", updateValues.Select(v => v.Split(' ')[1])) + ") and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
             ketnoi.capnhat(sql);
-            Thread.Sleep(1000);
-            Response.Redirect("giohang.aspx");
+            loadDB();
 
         }
 

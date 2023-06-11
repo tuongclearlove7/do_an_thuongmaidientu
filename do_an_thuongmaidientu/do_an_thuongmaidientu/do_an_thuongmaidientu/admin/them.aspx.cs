@@ -27,12 +27,10 @@ namespace do_an_thuongmaidientu.admin
         protected void themmoi_loaihang(object sender, EventArgs e)
         {
            
-            
             string sql1 = "INSERT INTO loaihang(maloai, tenloai) " +
              "VALUES(" + maloai_loaihang.Text + ", '" + tenloai.Text + "')";
             ketnoi.capnhat(sql1);
             themmoi_thanhcong.Text = "<p style='color:green;'>Thêm mới thành công</p>";
-           // Response.Redirect("homeAdmin.aspx");
         }
 
 
