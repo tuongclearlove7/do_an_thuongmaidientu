@@ -3,11 +3,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
-  <title>Bootstrap Example</title>
+  <title>Website thương mại điện tử</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -153,17 +158,17 @@
                   <asp:Label ID="dongthoigian" runat="server" Text=""></asp:Label>
               </h5>
               <h5>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Tường"> 
-                     <span class="label label-danger">Member one</span> 
-                </a>
-                   <a href="#" data-toggle="tooltip" data-placement="top" title="Huy"> 
-                      <span class="label label-success">Member two</span>
+                 <a href="#" data-toggle="tooltip" data-placement="top" title="Tường"> 
+                     <span class="label label-danger">Tường</span> 
                 </a>
                    <a href="#" data-toggle="tooltip" data-placement="top" title="Tín"> 
-                     <span class="label label-default">Member three</span>
+                      <span class="label label-success">Tín</span>
                 </a>
                    <a href="#" data-toggle="tooltip" data-placement="top" title="Đức"> 
-                     <span class="label label-warning">Member four</span>
+                     <span class="label label-default">Đức</span>
+                </a>
+                   <a href="#" data-toggle="tooltip" data-placement="top" title="Huy"> 
+                     <span class="label label-warning">Huy</span>
                 </a>
                 <a href="#" data-toggle="tooltip" data-placement="top" title="Asp.net">
                     <span class="label label-info">Framework</span>
@@ -173,6 +178,10 @@
                      <span class="label label-primary">Language</span>
                 </a>
                 <span class="label label-success">C#</span>
+                <a href="#" data-toggle="tooltip" title="Visual studio">
+                    <span class="label label-primary">Tool</span>
+                </a>
+                   <span class="label label-default">Visual studio</span>
                 <a href="#" data-toggle="tooltip" title="Visual studio">
                     <span class="label label-primary">Tool</span>
                 </a>

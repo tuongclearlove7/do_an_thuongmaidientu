@@ -31,7 +31,7 @@
                  </asp:TextBox>
             </div>
             <div>
-                <asp:Button ID="Button1" runat="server" Text="Mua" OnClick="mua" CommandArgument='<%# Container.ItemIndex %>' />
+                <asp:Button ID="Button1" CssClass="btn btn-warning" runat="server" Text="Mua" OnClick="mua" CommandArgument='<%# Container.ItemIndex %>' />
             </div>
         </ItemTemplate>
     </asp:DataList>

@@ -17,9 +17,16 @@ namespace do_an_thuongmaidientu.admin
             {
                 if (Session["tendangnhap"] != null)
                 {
-                    string sql = "select * from loaihang, mathang where loaihang.maloai = mathang.maloai";
-                    ds_mathang.DataSource = ketnoi.docdulieu(sql);
-                    ds_mathang.DataBind();
+                    if(Session["tendangnhap"].ToString() == "admin")
+                    {
+                        string sql = "select * from loaihang, mathang where loaihang.maloai = mathang.maloai";
+                        ds_mathang.DataSource = ketnoi.docdulieu(sql);
+                        ds_mathang.DataBind();
+                    }
+                    else
+                    {
+                        Response.Redirect("../user/homeUser.aspx");
+                    }
                 }
                 else
                 {

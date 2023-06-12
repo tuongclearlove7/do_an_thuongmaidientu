@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <div>
+     <%--<div>
         <h1>
             Đồ án nhóm : Website bán hàng
         </h1>
@@ -16,7 +16,7 @@
           <h1>
             Thành viên nhóm gồm : Tường, Tín, Sỹ, Huy
         </h1>
-    </div>
+    </div>--%>
 
 
 </asp:Content>

@@ -72,7 +72,7 @@ namespace do_an_thuongmaidientu.master
             }
             else
             {
-                dangnhap_thanhcong.Text = "<p style='color:red;'>Mật khẩu không chính xác!</p>";
+                thongbao.Text = "<p style='color:red;'>Mật khẩu không chính xác!</p>";
                 Session.Clear();
                 HttpCookie cookie_tendangnhap = Request.Cookies["tendangnhap"];
                 if (cookie_tendangnhap != null)

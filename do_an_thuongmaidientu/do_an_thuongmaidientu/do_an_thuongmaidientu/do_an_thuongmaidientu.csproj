@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="admin\404.aspx" />
     <Content Include="admin\donhang.aspx" />
     <Content Include="admin\homeAdmin.aspx" />
     <Content Include="admin\sua.aspx" />
@@ -82,9 +84,12 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="indexController.aspx" />
+    <Content Include="master\404.aspx" />
     <Content Include="master\loginPage.aspx" />
     <Content Include="master\login_block.ascx" />
+    <Content Include="public\image\error.png" />
     <Content Include="public\js\script.js" />
+    <Content Include="user\404.aspx" />
     <Content Include="user\chi_tiet_mathang.aspx" />
     <Content Include="user\giohang.aspx" />
     <Content Include="user\homeUser.aspx" />
@@ -93,6 +98,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\donhang.aspx.cs">
       <DependentUpon>donhang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +164,13 @@
     <Compile Include="indexController.aspx.designer.cs">
       <DependentUpon>indexController.aspx</DependentUpon>
     </Compile>
+    <Compile Include="master\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="master\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +210,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\chi_tiet_mathang.aspx.cs">
       <DependentUpon>chi_tiet_mathang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\css\" />
-    <Folder Include="public\image\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

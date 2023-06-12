@@ -25,6 +25,7 @@ namespace do_an_thuongmaidientu
             {
                 case "home":
                     Response.Redirect("./master/loginPage.aspx");
+                    //Server.Transfer("./master/loginPage.aspx");
                     break;
             }
         }
