@@ -84,7 +84,11 @@
 
     </style>
     <div class="thuongmaidientu">
-         <h1>THƯƠNG MẠI ĐIỆN TỬ</h1>
+         <h1>WEBSITE THƯƠNG MẠI ĐIỆN TỬ</h1>
+         <h4>MÔN HỌC</h4>
+         <p>THƯƠNG MẠI ĐIỆN TỬ</p>
+         <h4>GIẢNG VIÊN</h4>
+         <h5>TĂNG THỊ HÀ PHƯƠNG</h5>
     </div>
     <div>
          <asp:DataList ID="ds_loaihang"  runat="server">
