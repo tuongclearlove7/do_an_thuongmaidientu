@@ -21,12 +21,12 @@ namespace do_an_thuongmaidientu.admin
                     ds_user.DataBind();
                 }
                 else {
-                    Response.Redirect("../user/homeUser.aspx");
+                    Response.Redirect("../user/404.aspx");
                 }
             }
             else
             {
-                Response.Redirect("../master/loginPage.aspx");
+                Response.Redirect("../loginPage.aspx");
             }
 
         }

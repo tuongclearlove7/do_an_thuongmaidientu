@@ -11,39 +11,7 @@ namespace do_an_thuongmaidientu.master
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["tendangnhap"] != null)
-            {
-                if(Session["tendangnhap"].ToString() == "admin")
-                    account.Text = Session["tendangnhap"].ToString();
-                else account.Text = Session["tendangnhap"].ToString();
-            }
-        }
 
-        protected void dangxuat(object sender, EventArgs e)
-        {
-            Session.RemoveAll();
-            Session.Clear();
-            HttpCookie cookie_tendangnhap = Request.Cookies["tendangnhap"];
-            cookie_tendangnhap.Expires = DateTime.Now.AddDays(-1);
-            Response.Cookies.Add(cookie_tendangnhap);
-            Response.Redirect("../master/loginPage.aspx");
-        }
-        protected void chuyen_trang(object sender, EventArgs e)
-        {
-            Response.Redirect("../user/giohang.aspx");
-        }
-
-
-        protected void res_homepage(object sender, EventArgs e)
-        {
-            if (Session["tendangnhap"].ToString() == "admin")
-            {
-                Response.Redirect("../admin/homeAdmin.aspx");
-            }
-            else
-            {
-                Response.Redirect("../user/homeUser.aspx");
-            }
         }
     }
 }

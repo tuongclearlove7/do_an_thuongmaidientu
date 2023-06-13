@@ -19,17 +19,16 @@ namespace do_an_thuongmaidientu.user
             {
                 if (Session["tendangnhap"] != null)
                 {
-
                     if (Request.QueryString["MatHang"] != null)
                     {
                         string mahang = Request.QueryString["MatHang"];
-                        string sql = "SELECT * FROM mathang WHERE " +
-                                        "mathang.mahang = " + mahang;
+                        string sql = "SELECT * FROM loaihang, mathang WHERE loaihang.maloai = mathang.maloai AND mathang.mahang = " + mahang;
                         ds_mathang.DataSource = ketnoi.docdulieu(sql);
                         DataTable dt = ketnoi.docdulieu(sql);
                         ds_mathang.DataBind();
-                        
+
                     }
+
                     else
                     {
                         Response.Redirect("homeUser.aspx");
@@ -37,7 +36,7 @@ namespace do_an_thuongmaidientu.user
                 }
                 else
                 {
-                    Response.Redirect("../master/loginPage.aspx");
+                    Response.Redirect("../loginPage.aspx");
                 }
             }
 

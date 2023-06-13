@@ -44,7 +44,7 @@
                 <asp:BoundField DataField="soluong" HeaderText="Số lượng" />
                  <asp:TemplateField  HeaderText="hình ảnh">
                     <ItemTemplate>
-                            <asp:ImageButton  ID="ImageButton1" CssClass="img-sp" Height="80px" Width="100px" runat="server" PostBackUrl="" ImageUrl='<%# Eval("hinh") %>' />
+                            <asp:ImageButton  ID="ImageButton1" CssClass="img-sp" Height="80px" Width="100px" runat="server" PostBackUrl="" ImageUrl='<%# Eval("hinhmathang") %>' />
                              <asp:TextBox ID="textbox_mahang" Visible="false" Text='<%# Eval("mahang") %>' runat="server"></asp:TextBox>
                             <asp:TextBox ID="textbox_tendangnhap" Visible="false" Text='<%# Eval("tendangnhap") %>' runat="server"></asp:TextBox>
                     </ItemTemplate>

@@ -57,7 +57,7 @@ namespace do_an_thuongmaidientu.user
                 }
                 else
                 {
-                    Response.Redirect("../master/loginPage.aspx");
+                    Response.Redirect("../loginPage.aspx");
                 }
             }
         }

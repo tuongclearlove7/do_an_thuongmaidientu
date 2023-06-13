@@ -28,7 +28,6 @@ namespace do_an_thuongmaidientu.master
             Response.Redirect("../admin/timkiem.aspx?donhang=" + nhap);      
 
         }
-        //
             protected void dangxuat(object sender, EventArgs e)
         {
             Session.RemoveAll();
@@ -36,7 +35,7 @@ namespace do_an_thuongmaidientu.master
             HttpCookie cookie_tendangnhap = Request.Cookies["tendangnhap"];
             cookie_tendangnhap.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Add(cookie_tendangnhap);
-            Response.Redirect("../master/loginPage.aspx");
+            Response.Redirect("../loginPage.aspx");
         }
         protected void chuyen_trang(object sender, EventArgs e)
         {

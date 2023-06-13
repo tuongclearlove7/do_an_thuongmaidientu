@@ -13,7 +13,7 @@ namespace do_an_thuongmaidientu.user
         {
             if (Session["tendangnhap"] == null)
             {
-                Response.Redirect("../master/loginPage.aspx");
+                Response.Redirect("../loginPage.aspx");
 
             }
           

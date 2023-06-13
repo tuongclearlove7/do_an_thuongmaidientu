@@ -115,19 +115,16 @@
           <div class="container-fluid">
           <div class="row content">
             <div style="height: auto;" class="col-sm-3 sidenav">
-              <h4 style="color:black;">Webform</h4>
               <ul class="nav nav-pills nav-stacked">
                 <li class="active"><asp:LinkButton ID="LinkButton1" OnClick="res_homepage" runat="server">Home</asp:LinkButton></li>
                 <li><a href="thongtinUser.aspx">Thông tin Khách hàng</a></li>
                 <li><a href="../user/thongtin.aspx">Thông tin Admin</a></li>
                   <li><a href="donhang.aspx">Quản lý đơn hàng</a></li>
                    <li><a href="them.aspx">Thêm mới loại hàng và mặt hàng</a></li>
-                <li><a href="timkiem.aspx">Tìm kiếm đơn hàng</a></li>
+                <li><a href="lichsuthanhtoan.aspx">Lịch sử thanh toán</a></li>
               </ul><br>
               <div class="input-group">
                   <asp:TextBox ID="nhaptimkiem" CssClass="form-control" runat="server" Placeholder="Nhập vào tên đăng nhập" ></asp:TextBox>
-                <%--  <asp:RequiredFieldValidator style="margin:10px;" ForeColor="Red" CssClass=".error-message" ID="isvalid_nhaptimkiem" runat="server" ControlToValidate="nhaptimkiem"
-                    ErrorMessage="Vui lòng nhập vào !"></asp:RequiredFieldValidator>--%>
                   <span class="input-group-btn">
                     <asp:Button CssClass="btn btn-success" ID="Button1" runat="server" OnClick="timkiem" Text="Tìm kiếm" />
                 </span>

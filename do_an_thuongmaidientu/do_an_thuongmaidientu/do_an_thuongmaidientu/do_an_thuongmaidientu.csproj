@@ -71,8 +71,10 @@
     <Content Include="admin\404.aspx" />
     <Content Include="admin\donhang.aspx" />
     <Content Include="admin\homeAdmin.aspx" />
+    <Content Include="admin\lichsuthanhtoan.aspx" />
     <Content Include="admin\sua.aspx" />
     <Content Include="admin\them.aspx" />
+    <Content Include="admin\themmoi.aspx" />
     <Content Include="admin\thongtinUser.aspx" />
     <Content Include="admin\timkiem.aspx" />
     <Content Include="App_Data\quanly_banhang.mdf" />
@@ -83,10 +85,13 @@
       <DependentUpon>quanly_banhang.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="homepage.aspx" />
     <Content Include="indexController.aspx" />
+    <Content Include="loginPage.aspx" />
     <Content Include="master\404.aspx" />
-    <Content Include="master\loginPage.aspx" />
-    <Content Include="master\login_block.ascx" />
+    <Content Include="master\footer.ascx" />
+    <Content Include="master\header.ascx" />
+    <Content Include="public\css\animation.css" />
     <Content Include="public\image\error.png" />
     <Content Include="public\js\script.js" />
     <Content Include="user\404.aspx" />
@@ -94,6 +99,7 @@
     <Content Include="user\giohang.aspx" />
     <Content Include="user\homeUser.aspx" />
     <Content Include="user\sua_xoa.aspx" />
+    <Content Include="user\thanhtoan.aspx" />
     <Content Include="user\thongtin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -126,6 +132,13 @@
     <Compile Include="admin\homeAdmin.aspx.designer.cs">
       <DependentUpon>homeAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\lichsuthanhtoan.aspx.cs">
+      <DependentUpon>lichsuthanhtoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\lichsuthanhtoan.aspx.designer.cs">
+      <DependentUpon>lichsuthanhtoan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\sua.aspx.cs">
       <DependentUpon>sua.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +152,13 @@
     </Compile>
     <Compile Include="admin\them.aspx.designer.cs">
       <DependentUpon>them.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\themmoi.aspx.cs">
+      <DependentUpon>themmoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\themmoi.aspx.designer.cs">
+      <DependentUpon>themmoi.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\thongtinUser.aspx.cs">
       <DependentUpon>thongtinUser.aspx</DependentUpon>
@@ -157,12 +177,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="indexController.aspx.cs">
       <DependentUpon>indexController.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="indexController.aspx.designer.cs">
       <DependentUpon>indexController.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginPage.aspx.cs">
+      <DependentUpon>loginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginPage.aspx.designer.cs">
+      <DependentUpon>loginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="master\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
@@ -178,26 +212,19 @@
     <Compile Include="master\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="master\Login.Master.cs">
-      <DependentUpon>Login.Master</DependentUpon>
+    <Compile Include="master\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="master\Login.Master.designer.cs">
-      <DependentUpon>Login.Master</DependentUpon>
+    <Compile Include="master\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
     </Compile>
-    <Compile Include="master\loginPage.aspx.cs">
-      <DependentUpon>loginPage.aspx</DependentUpon>
+    <Compile Include="master\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="master\loginPage.aspx.designer.cs">
-      <DependentUpon>loginPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="master\login_block.ascx.cs">
-      <DependentUpon>login_block.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="master\login_block.ascx.designer.cs">
-      <DependentUpon>login_block.ascx</DependentUpon>
+    <Compile Include="master\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
     </Compile>
     <Compile Include="master\page.Master.cs">
       <DependentUpon>page.Master</DependentUpon>
@@ -205,6 +232,13 @@
     </Compile>
     <Compile Include="master\page.Master.designer.cs">
       <DependentUpon>page.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master\user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
     </Compile>
     <Compile Include="Models\ketnoi_database.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +279,13 @@
     <Compile Include="user\sua_xoa.aspx.designer.cs">
       <DependentUpon>sua_xoa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\thanhtoan.aspx.cs">
+      <DependentUpon>thanhtoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\thanhtoan.aspx.designer.cs">
+      <DependentUpon>thanhtoan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\thongtin.aspx.cs">
       <DependentUpon>thongtin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,9 +295,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="master\Login.Master" />
-    <Content Include="master\page.Master" />
     <Content Include="master\admin.Master" />
+    <Content Include="master\user.Master" />
+    <Content Include="master\page.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -265,9 +306,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="public\css\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

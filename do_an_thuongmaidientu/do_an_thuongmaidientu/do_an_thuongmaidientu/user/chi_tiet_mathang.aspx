@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/page.Master" AutoEventWireup="true" CodeBehind="chi_tiet_mathang.aspx.cs" Inherits="do_an_thuongmaidientu.user.chi_tiet_mathang" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/user.Master" AutoEventWireup="true" CodeBehind="chi_tiet_mathang.aspx.cs" Inherits="do_an_thuongmaidientu.user.chi_tiet_mathang" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,7 +15,7 @@
     </div>
      <asp:DataList ID="ds_mathang" runat="server">
         <ItemTemplate>
-            <asp:ImageButton ID="ImageButton1" PostBackUrl="bai3_mathang_chitiet.aspx" CssClass="img-sp" runat="server" ImageUrl='<%# Eval("hinh") %>' />
+            <asp:ImageButton ID="ImageButton1" PostBackUrl='<%# "chi_tiet_mathang.aspx?MatHang="+Eval("mahang") %>' CssClass="img-sp" runat="server" ImageUrl='<%# Eval("hinhmathang") %>' />
             <div>
                 <asp:Label ID="Label1" runat="server" Text='<%# "Tên hàng : "+Eval("tenhang") %>'></asp:Label>
             </div>
@@ -35,6 +35,9 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
+
+   
+
         <asp:Label ID="hienthi" runat="server" Text=""></asp:Label>
 
 </asp:Content>

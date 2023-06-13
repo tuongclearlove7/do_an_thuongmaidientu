@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/page.Master" AutoEventWireup="true" CodeBehind="homeUser.aspx.cs" Inherits="do_an_thuongmaidientu.user.homeUser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/user.Master" AutoEventWireup="true" CodeBehind="homeUser.aspx.cs" Inherits="do_an_thuongmaidientu.user.homeUser" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -20,7 +20,7 @@
            padding:15px;
            border: 3px solid white;
            border-radius: 10px 0px;
-           background-color: #ee4d2d;
+           background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
        }
        .card-img-top{
            width:250px;
@@ -76,15 +76,15 @@
                 <div class="card">
                     <asp:Label CssClass="ma-loaihang" ID="Label1" runat="server" Text='<%# Eval("mahang") %>'></asp:Label>
                  <div class="view overlay">
-                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='<%# Eval("hinh") %>' PostBackUrl='<%# "chi_tiet_mathang.aspx?MatHang=" + Eval("mahang") %>'  />
+                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='<%# Eval("hinhmathang") %>' PostBackUrl='<%# "chi_tiet_mathang.aspx?MatHang=" + Eval("mahang") %>'  />
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
                   </div>
                   <div class="card-body">
                     <h4 class="card-title">
-                        <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenloai") %>' />
-                        <asp:TextBox ID="maloai" CssClass="form-control" Visible="false" runat="server" Text='<%# Eval("maloai") %>'></asp:TextBox>
+                        <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenhang") %>' />
+                        <asp:TextBox ID="maloai" CssClass="form-control" Visible="false" runat="server" Text='<%# Eval("mahang") %>'></asp:TextBox>
                     </h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
                     <div class="lop-nut">

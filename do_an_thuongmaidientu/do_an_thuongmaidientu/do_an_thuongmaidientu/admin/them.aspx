@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
      <style>
         .form-control{
             width:500px;
@@ -14,21 +13,32 @@
         }
        .themthanhcong{
            color:greenyellow;
-           padding-top:15px;
+           padding-top:30px;
        }
     </style>
     
     <div class="them-container">
          <div class="form-group">
-        <asp:Label ID="Label1" runat="server" Text="Mã loại" ></asp:Label>
-        <asp:TextBox ID="maloai_loaihang" CssClass="form-control"  runat="server"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="Mã loại" ></asp:Label>
+            <asp:TextBox ID="maloai_loaihang" CssClass="form-control"  runat="server"></asp:TextBox>
         </div>
         <div class="form-group">
-          <asp:Label ID="Label2" runat="server" Text="Tên loại" ></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Tên loại" ></asp:Label>
             <asp:TextBox ID="tenloai" CssClass="form-control"  runat="server"></asp:TextBox>
+        </div>
+           <div class="form-group">
+            <asp:Label ID="Label3" runat="server" Text="Hình ảnh" ></asp:Label>
+            <asp:TextBox ID="hinh_loaihang" CssClass="form-control"  runat="server"></asp:TextBox>
+        </div>
+           <div class="form-group">
+            <asp:Label ID="Label10" runat="server" Text="Mô tả" ></asp:Label>
+            <asp:TextBox ID="mota_loaihang" CssClass="form-control"  runat="server"></asp:TextBox>
         </div>
         <div>
             <asp:Button ID="Button1" CssClass="btn btn-primary" OnClick="themmoi_loaihang" runat="server" Text="Thêm" />
+        </div>
+         <div class="themthanhcong" >
+             <asp:Label ID="themmoi_thanhcong" CssClass="" runat="server" Text=""></asp:Label>
         </div>
     </div>
     <br/>
@@ -62,10 +72,7 @@
         <div>
             <asp:Button ID="Button2" CssClass="btn btn-primary" OnClick="themmoi_mathang" runat="server" Text="Thêm" />
         </div>
-         <div>
-             <asp:Label ID="themmoi_thanhcong" CssClass="themthanhcong" runat="server" Text=""></asp:Label>
-        </div>
+       
     </div>
-     
 
 </asp:Content>

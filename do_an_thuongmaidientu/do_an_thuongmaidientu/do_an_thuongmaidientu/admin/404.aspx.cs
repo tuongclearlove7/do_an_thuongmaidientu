@@ -19,7 +19,7 @@ namespace do_an_thuongmaidientu.admin
             }
             else
             {
-                Response.Redirect("../master/loginPage.aspx");
+                Response.Redirect("../loginPage.aspx");
             }
    
         }

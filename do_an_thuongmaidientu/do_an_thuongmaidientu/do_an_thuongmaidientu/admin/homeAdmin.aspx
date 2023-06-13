@@ -21,7 +21,8 @@
            padding:15px;
            border: 3px solid white;
            border-radius: 10px 0px;
-           background-color: #ee4d2d;
+           
+            background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
        }
        .card-img-top{
            width:250px;
@@ -76,21 +77,21 @@
                 <div class="card">
                     <asp:Label CssClass="ma-loaihang" ID="Label1" runat="server" Text='<%# Eval("mahang") %>'></asp:Label>
                  <div class="view overlay">
-                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='<%# Eval("hinh") %>'  />
+                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='<%# Eval("hinhmathang") %>'  />
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
                   </div>
                   <div class="card-body">
                     <h4 class="card-title">
-                        <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenloai") %>' />
+                        <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenhang") %>' />
                         <asp:TextBox ID="maloai" CssClass="form-control" Visible="false" runat="server" Text='<%# Eval("mahang") %>'></asp:TextBox>
                     </h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
                     <div class="lop-nut">
-                        <asp:Button Width="100px" Height="30px"  ID="Button1" CssClass="btn btn-warning" runat="server" Text="Sửa" PostBackUrl='<%# "sua.aspx?MatHang="+Eval("mahang") %>' />
+                        <asp:Button Width="100px" Height="30px"  ID="Button1" CssClass="btn btn-default" runat="server" Text="Sửa" PostBackUrl='<%# "sua.aspx?MatHang="+Eval("mahang") %>' />
 
-                         <asp:Button Width="100px" Height="30px"  ID="btnXoa" CssClass="btn btn-warning" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
+                         <asp:Button Width="100px" Height="30px"  ID="btnXoa" CssClass="btn btn-danger" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
                     </div>
                   </div>
                 </div>

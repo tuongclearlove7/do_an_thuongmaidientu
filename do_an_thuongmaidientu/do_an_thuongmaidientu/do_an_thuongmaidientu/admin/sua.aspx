@@ -27,6 +27,14 @@
                 <asp:Label ID="Label7" runat="server" Text="Mã loại"></asp:Label>
                 <asp:TextBox ID="tenloai" CssClass="form-control" runat="server" Text='<%# Eval("tenloai") %>'></asp:TextBox>
             </div>
+              <div class="form-group">
+          <asp:Label ID="Label3" runat="server" Text="Hình ảnh" ></asp:Label>
+            <asp:TextBox ID="hinh_loaihang" CssClass="form-control" Text='<%# Eval("hinhloaihang") %>'  runat="server"></asp:TextBox>
+        </div>
+           <div class="form-group">
+          <asp:Label ID="Label10" runat="server" Text="Mô tả" ></asp:Label>
+            <asp:TextBox ID="mota_loaihang" CssClass="form-control" Text='<%# Eval("mota") %>'  runat="server"></asp:TextBox>
+        </div>
             <div>
             </div>
         </ItemTemplate>
@@ -58,7 +66,7 @@
              </div>
              <div class="form-group">
               <asp:Label ID="Label3" runat="server" Text="Hình ảnh"></asp:Label>
-                <asp:TextBox ID="hinh" CssClass="form-control" runat="server" Text='<%# Eval("hinh") %>'></asp:TextBox>
+                <asp:TextBox ID="hinh" CssClass="form-control" runat="server" Text='<%# Eval("hinhmathang") %>'></asp:TextBox>
                 <asp:FileUpload ID="FileUpload2" runat="server" />
              </div>
             <div>
@@ -66,5 +74,5 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
-
+    </div>
 </asp:Content>

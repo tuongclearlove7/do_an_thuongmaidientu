@@ -39,12 +39,12 @@ namespace do_an_thuongmaidientu.admin
                     }
                 }
                 else {
-                    Response.Redirect("../user/homeUser.aspx");
+                    Response.Redirect("../user/404.aspx");
                 };
             }
             else
             {
-                Response.Redirect("../master/loginPage.aspx");
+                Response.Redirect("../loginPage.aspx");
             }
         }
 
@@ -59,14 +59,14 @@ namespace do_an_thuongmaidientu.admin
             TextBox mota = (TextBox)item.FindControl("mota");
             TextBox dongia = (TextBox)item.FindControl("dongia");
             TextBox maloai = (TextBox)item.FindControl("mathang_maloai");
-            TextBox hinh = (TextBox)item.FindControl("hinh");
+            TextBox hinhmathang = (TextBox)item.FindControl("hinhmathang");
 
             string mahangValue = mahang.Text;
             string tenhangValue = tenhang.Text;
             string motaValue = mota.Text;
             string dongiaValue = dongia.Text;
             string maloaiValue = maloai.Text;
-            string hinhValue = hinh.Text;
+            string hinhValue = hinhmathang.Text;
         }
 
         protected void sua_loaihang(object sender, EventArgs e)
@@ -75,9 +75,12 @@ namespace do_an_thuongmaidientu.admin
             {
                 TextBox txt_maloai = item.FindControl("loaihang_maloai") as TextBox;
                 TextBox txt_tenloai = item.FindControl("tenloai") as TextBox;
+                TextBox txt_hinhloaihang = item.FindControl("hinhloaihang") as TextBox;
+                TextBox txt_mota = item.FindControl("mota") as TextBox;
                 string maloai = txt_maloai.Text;
                 string tenloai = txt_tenloai.Text;
-               
+                string hinhloaihang = txt_hinhloaihang.Text;
+                string mota = txt_mota.Text;
             }
 
         }
