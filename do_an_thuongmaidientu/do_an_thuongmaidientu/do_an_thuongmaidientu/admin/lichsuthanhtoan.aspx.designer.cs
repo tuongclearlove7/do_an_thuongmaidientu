@@ -22,6 +22,15 @@ namespace do_an_thuongmaidientu.admin {
         protected global::System.Web.UI.WebControls.GridView ds_thanhtoan;
         
         /// <summary>
+        /// ds_sl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ds_sl;
+        
+        /// <summary>
         /// thongbao control.
         /// </summary>
         /// <remarks>

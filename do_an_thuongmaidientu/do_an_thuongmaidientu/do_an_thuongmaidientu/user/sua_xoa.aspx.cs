@@ -14,17 +14,6 @@ namespace do_an_thuongmaidientu.user
         Models.ketnoi_database ketnoi = new Models.ketnoi_database();
         protected void ds_donhang_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                int soluong = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "soluong"));
-                double dongia = Convert.ToDouble(DataBinder.Eval(e.Row.DataItem, "dongia"));
-                double thanhTien = soluong * dongia;
-                Label thanhTienLabel = (Label)e.Row.FindControl("thanhtien");
-                thanhTienLabel.Text = thanhTien.ToString();
-            }
-
-
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 CheckBoxList checkBoxList1 = (CheckBoxList)e.Row.FindControl("CheckBoxList1");
@@ -65,7 +54,7 @@ namespace do_an_thuongmaidientu.user
             {
                 if (Session["tendangnhap"] != null)
                 {
-                    string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+                    string sql = "select dongia * soluong as thanhtien, * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
                     ds_donhang.DataSource = ketnoi.docdulieu(sql);
                     ds_donhang.DataBind();
                     if (ds_donhang.Rows.Count == 0)
@@ -94,7 +83,7 @@ namespace do_an_thuongmaidientu.user
 
         protected void loadDB()
         {
-            string sql = "select * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
+            string sql = "select dongia * soluong as thanhtien, * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
             ds_donhang.DataSource = ketnoi.docdulieu(sql);
             ds_donhang.DataBind();
             if (ds_donhang.Rows.Count == 0)

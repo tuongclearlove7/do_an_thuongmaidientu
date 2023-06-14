@@ -32,19 +32,21 @@
         </div>
         <div>
             <br/>
-            <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Xóa sửa" PostBackUrl="sua_xoa.aspx" /> 
+            <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Xóa sửa" Onclick="chuyentrangXoasua" /> 
         </div>
         <br/>
-         <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" OnRowDataBound="ds_donhang_RowDataBound">
+         <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" >
             <Columns>
                 <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />
                 <asp:BoundField DataField="tenhang" HeaderText="Tên hàng" />
                 <asp:BoundField DataField="mota" HeaderText="Mô tả" />
                 <asp:BoundField DataField="dongia" HeaderText="Đơn giá" />
                 <asp:BoundField DataField="soluong" HeaderText="Số lượng" />
-                <asp:TemplateField  HeaderText="Thành tiền">
+                <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
+                <asp:BoundField DataField="thanhtoan" HeaderText="Thanh toán" />
+                 <asp:TemplateField  HeaderText="Thanh toán">
                     <ItemTemplate>
-                        <asp:Label ID="thanhtien" runat="server" Text=""></asp:Label>
+                        <asp:Button CssClass="btn btn-success" PostBackUrl='<%#"thanhtoan.aspx?MatHang=" + Eval("mahang") %>' ID="Button2" runat="server" Text="Thanh toán" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

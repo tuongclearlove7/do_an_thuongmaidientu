@@ -98,6 +98,7 @@
     <Content Include="user\chi_tiet_mathang.aspx" />
     <Content Include="user\giohang.aspx" />
     <Content Include="user\homeUser.aspx" />
+    <Content Include="user\lichsuthanhtoan.aspx" />
     <Content Include="user\sua_xoa.aspx" />
     <Content Include="user\thanhtoan.aspx" />
     <Content Include="user\thongtin.aspx" />
@@ -271,6 +272,13 @@
     </Compile>
     <Compile Include="user\homeUser.aspx.designer.cs">
       <DependentUpon>homeUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\lichsuthanhtoan.aspx.cs">
+      <DependentUpon>lichsuthanhtoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\lichsuthanhtoan.aspx.designer.cs">
+      <DependentUpon>lichsuthanhtoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\sua_xoa.aspx.cs">
       <DependentUpon>sua_xoa.aspx</DependentUpon>

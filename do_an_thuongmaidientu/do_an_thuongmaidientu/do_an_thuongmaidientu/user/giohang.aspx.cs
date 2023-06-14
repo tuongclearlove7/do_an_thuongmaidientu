@@ -12,27 +12,18 @@ namespace do_an_thuongmaidientu.user
     {
         Models.ketnoi_database ketnoi = new Models.ketnoi_database();
 
-        protected void ds_donhang_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void chuyentrangXoasua(object sender, EventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                int soluong = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "soluong"));
-                double dongia = Convert.ToDouble(DataBinder.Eval(e.Row.DataItem, "dongia"));
-                double thanhTien = soluong * dongia;
-                Label thanhTienLabel = (Label)e.Row.FindControl("thanhtien");
-                thanhTienLabel.Text = thanhTien.ToString();
-
-
-            }
+            Response.Redirect("sua_xoa.aspx");
         }
 
-        protected void Page_Load(object sender, EventArgs e)
+            protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 if (Session["tendangnhap"] != null)
                 {
-                    string sql2 = "select * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'" + " order by mathang.dongia asc";
+                    string sql2 = "select dongia * soluong as thanhtien, CASE WHEN donhang.soluong > 0 THEN 'Chưa thanh toán' ELSE 'Đã thanh toán' END as thanhtoan, * from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'" + " order by mathang.dongia asc";
                     ds_donhang.DataSource = ketnoi.docdulieu(sql2);
                     ds_donhang.DataBind();
                     if (ds_donhang.Rows.Count == 0)

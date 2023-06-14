@@ -186,6 +186,10 @@
         text-align:center;
         margin-bottom:20px;
     }
+      .thuongmaidientu{
+            text-align:center;
+            margin-bottom:30px;
+        }
   </style>
          <div class="container-fluid">
           <div class="row content">
@@ -222,6 +226,13 @@
               <hr>
                 <div class="shop-page">
                       <h1>ĐỒ ÁN NHÓM</h1>
+                </div>
+                 <div class="thuongmaidientu">
+                     <h1>WEBSITE THƯƠNG MẠI ĐIỆN TỬ</h1>
+                     <h2>MÔN HỌC</h2>
+                     <h3>THƯƠNG MẠI ĐIỆN TỬ</h3>
+                     <h4>GIẢNG VIÊN</h4>
+                     <h5>TĂNG THỊ HÀ PHƯƠNG</h5>
                 </div>
                  <div class="thoigian">
                       <span class="glyphicon glyphicon-time">

@@ -29,7 +29,7 @@
     </style>
  
     <br/>
-     <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" OnRowDataBound="ds_donhang_RowDataBound" >
+     <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false"  >
             <Columns>
                  <asp:TemplateField HeaderText="Xóa">
                       <ItemTemplate>
@@ -49,11 +49,8 @@
                             <asp:TextBox ID="textbox_tendangnhap" Visible="false" Text='<%# Eval("tendangnhap") %>' runat="server"></asp:TextBox>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField  HeaderText="Thành tiền">
-                    <ItemTemplate>
-                        <asp:Label ID="thanhtien" runat="server" Text=""></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
+                <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
+                <asp:BoundField DataField="thanhtoantien" HeaderText="Thanh toán"/>
             </Columns>
         </asp:GridView>
         <div class="total-money">

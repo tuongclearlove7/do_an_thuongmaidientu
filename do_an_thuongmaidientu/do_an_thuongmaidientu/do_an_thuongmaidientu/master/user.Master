@@ -113,6 +113,7 @@
                 <li><a href="../user/giohang.aspx">Giỏ hàng</a></li>
                   <li><a href="../user/chi_tiet_mathang.aspx">Trang chi tiết</a></li>
                 <li><a href="../user/thanhtoan.aspx">Thanh toán</a></li>
+                   <li><a href="lichsuthanhtoan.aspx">Lịch sử thanh toán</a></li>
               </ul><br>
               <div class="input-group">
                 <asp:TextBox ID="nhaptimkiem" CssClass="form-control" runat="server" Placeholder="Nhập vào loại hàng" ></asp:TextBox>

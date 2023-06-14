@@ -49,11 +49,7 @@
                         <asp:TextBox ID="textbox_mahang" Visible="false" Text='<%# Eval("mahang") %>' runat="server"></asp:TextBox>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField  HeaderText="Thành tiền">
-                    <ItemTemplate>
-                        <asp:Label ID="thanhtien" runat="server" Text=""></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
+                <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
             </Columns>
         </asp:GridView>
         <div>

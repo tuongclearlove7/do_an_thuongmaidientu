@@ -6,10 +6,25 @@
 
     </style>
      <div class="thanhtoan-container">
+     
          <div class="form-group">
-            <asp:Label ID="Label1"  runat="server" Text="Mã thanh toán" ></asp:Label>
-            <asp:TextBox ID="txtmathanhtoan" ReadOnly="true" CssClass="form-control"  runat="server"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="Mã hàng" ></asp:Label>
+            <asp:TextBox ID="txtmahang"  ReadOnly="true" CssClass="form-control"  runat="server"></asp:TextBox>
         </div>
+         <asp:DataList ID="ds_thanhtoan"  runat="server">
+            <ItemTemplate>
+                <div class="form-group">
+                    <asp:Label ID="Label6" runat="server" Text="Tên hàng"></asp:Label>
+                    <asp:TextBox ID="txttenhang" CssClass="form-control" ReadOnly="true" runat="server" Text='<%# Eval("tenhang") %>'></asp:TextBox>
+                </div>
+               
+            </ItemTemplate>
+        </asp:DataList>
+          <div class="form-group">
+                <asp:Label ID="Label7" runat="server" Text="Đơn giá"></asp:Label>
+                <asp:TextBox ID="txtdongia" CssClass="form-control" ReadOnly="true" runat="server" Text=''></asp:TextBox>
+            </div>
+
         <div class="form-group">
             <asp:Label ID="Label2" runat="server" Text="Tên đăng nhập" ></asp:Label>
             <asp:TextBox ID="txttendangnhap"  ReadOnly="true" CssClass="form-control"  runat="server"></asp:TextBox>

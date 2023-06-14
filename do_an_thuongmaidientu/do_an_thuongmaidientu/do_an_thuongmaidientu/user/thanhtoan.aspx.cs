@@ -17,21 +17,36 @@ namespace do_an_thuongmaidientu.user
             {
                 if (Session["tendangnhap"] != null)
                 {
-                    string user = Session["tendangnhap"].ToString().Trim();
-                    Random random = new Random();
-                    int ma_ngaunhien = random.Next(1, 100000);
-                    txtmathanhtoan.Text = ma_ngaunhien.ToString().Trim();
-                    txttendangnhap.Text = user;
-
-                    string sql2 = "select * from mathang, donhang where mathang.mahang = donhang.mahang";
-                    DataTable dt = new DataTable();
-                    dt = ketnoi.docdulieu(sql2);
-                    if (dt.Rows.Count == 0)
+                    if (Request.QueryString["MatHang"] != null)
                     {
-                        dt = null;
-                        thongbao.Text = "Không đơn hàng nào!";
+                        string mahang = Request.QueryString["MatHang"];
+                        string user = Session["tendangnhap"].ToString().Trim();
+                        txtmahang.Text = mahang;
+                        txttendangnhap.Text = user;
+                        string sql2 = "select * from mathang, donhang where mathang.mahang = donhang.mahang AND donhang.tendangnhap = '" + user + "' AND donhang.mahang = " + mahang;
+                        DataTable dt = new DataTable();
+                        dt = ketnoi.docdulieu(sql2);
+                        ds_thanhtoan.DataSource = dt;
+                        ds_thanhtoan.DataBind();
+
+                        string sql3 = "SELECT dongia * soluong FROM mathang, donhang WHERE mathang.mahang = donhang.mahang  AND mathang.mahang = " + mahang + " AND donhang.tendangnhap = '" + user +"'";
+                        DataTable dt2 = new DataTable();
+                        dt2 = ketnoi.docdulieu(sql3);
+                        double dongia = Convert.ToDouble(dt2.Rows[0][0]);
+
+                        txtdongia.Text = dongia.ToString();
+
+                        if (dt.Rows.Count == 0)
+                        {
+                            dt = null;
+                            thongbao.Text = "Không đơn hàng nào!";
+                        }
                     }
-                    return;
+
+                    else
+                    {
+                        Response.Redirect("homeUser.aspx");
+                    }
                 }
                 else
                 {
@@ -42,17 +57,21 @@ namespace do_an_thuongmaidientu.user
 
         protected void thanhtoantien(object sender, EventArgs e)
         {
-           
-            string sql1 = "select sum(dongia * soluong) from mathang, donhang where mathang.mahang = donhang.mahang and donhang.tendangnhap like '" + Session["tendangnhap"] + "'";
-            DataTable dt2 = new DataTable();
-            dt2 = ketnoi.docdulieu(sql1);
-            double tong = (double)dt2.Rows[0][0];
+            Random random = new Random();
+            string mahang = Request.QueryString["MatHang"];
+            int ma_ngaunhien = random.Next(1, 100000);
+            string sql3 = "SELECT dongia * soluong FROM mathang, donhang WHERE mathang.mahang = donhang.mahang  AND mathang.mahang = " + mahang + " AND donhang.tendangnhap = '" + Session["tendangnhap"].ToString().Trim() + "'";
+            DataTable dt = new DataTable();
+            dt = ketnoi.docdulieu(sql3);
+            double dongia = Convert.ToDouble(dt.Rows[0][0]);
+            //txtgia.Text = dongia.ToString();
+
             double sotien_tt = Convert.ToDouble(txtsotien.Text);
-            if (sotien_tt > tong)
+            if (sotien_tt > dongia)
             {
-                thongbao.Text = "Số tiền bạn thanh toán phải bằng : " + tong;
+                thongbao.Text = "Số tiền bạn thanh toán phải bằng : " + dongia;
             }
-            else if (sotien_tt < tong)
+            else if (sotien_tt < dongia)
             {
                 thongbao.Text = "Số tiền của bạn k đủ để thanh toán!";
             }
@@ -61,14 +80,19 @@ namespace do_an_thuongmaidientu.user
 
                 DateTime txtthoigian = DateTime.Now;
                 string tendangnhap = Session["tendangnhap"].ToString().Trim();
-                string sql2 = string.Format("INSERT INTO thanhtoan(mathanhtoan, tendangnhap, sotien, thoigian) VALUES('{0}', '{1}', '{2}', '{3}')",
-                txtmathanhtoan.Text, txttendangnhap.Text, txtsotien.Text, txtthoigian);
+                string sql2 = string.Format("INSERT INTO thanhtoan(mathanhtoan, tendangnhap, sotien, thoigian, mahang) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')",
+                ma_ngaunhien, txttendangnhap.Text, txtsotien.Text, txtthoigian, txtmahang.Text);
                 ketnoi.capnhat(sql2);
-                //string sql3 = "UPDATE donhang SET soluong = 0 WHERE donhang.tendangnhap = '" + tendangnhap + "'";
-                string sql3 = "DELETE FROM donhang WHERE tendangnhap = '" + tendangnhap + "'";
-                ketnoi.capnhat(sql3);
+
+                string sql4 = "DELETE FROM donhang WHERE donhang.tendangnhap = '" + tendangnhap + "' AND donhang.mahang = " + mahang;
+                ketnoi.capnhat(sql4);
+                //string sql4 = "UPDATE donhang SET soluong = 0 WHERE donhang.tendangnhap = '" + tendangnhap + "' AND donhang.mahang = " + mahang;
+                //ketnoi.capnhat(sql4);
+
                 thongbao.Text = "Thanh toán thành công!";
             }
+
+
         }
 
     }

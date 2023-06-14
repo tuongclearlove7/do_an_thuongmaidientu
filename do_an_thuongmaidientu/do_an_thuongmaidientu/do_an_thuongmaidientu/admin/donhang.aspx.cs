@@ -33,7 +33,7 @@ namespace do_an_thuongmaidientu.admin
                 {
                     if (Session["tendangnhap"].ToString() == "admin")
                     {
-                        string sql2 = "select * from mathang, donhang where mathang.mahang = donhang.mahang order by mathang.dongia asc";
+                        string sql2 = "select soluong * dongia as thanhtien ,* , CASE WHEN donhang.soluong > 0 THEN 'Chưa thanh toán' ELSE 'Đã thanh toán' END as thanhtoantien from mathang, donhang where mathang.mahang = donhang.mahang order by mathang.dongia asc";
                         ds_donhang.DataSource = ketnoi.docdulieu(sql2);
                         ds_donhang.DataBind();
                         if (ds_donhang.Rows.Count == 0)

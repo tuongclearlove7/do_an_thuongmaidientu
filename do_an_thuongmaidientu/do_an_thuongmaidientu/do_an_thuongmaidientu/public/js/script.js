@@ -172,6 +172,7 @@ function renderHomeItem(myAPI) {
         //   <p class="animate_img"><img width: 300px; class="my-image" src="${api.img}"></p>
         return `<div class="knowlegdeItem_id_${api.id}">
                 <div>${api.text}</div>
+                <br>
                 <button class="btn btn-danger" onclick = "handleDeleteHomeItem(${api.id});">
                 xóa</button>
                 </div>

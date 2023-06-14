@@ -10,6 +10,7 @@ namespace do_an_thuongmaidientu.admin
     public partial class lichsuthanhtoan : System.Web.UI.Page
     {
         Models.ketnoi_database ketnoi = new Models.ketnoi_database();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -18,13 +19,14 @@ namespace do_an_thuongmaidientu.admin
                 {
                     if (Session["tendangnhap"].ToString() == "admin")
                     {
-                        string sql2 = "SELECT * FROM thanhtoan";
+                        string sql2 = "SELECT *, sotien/dongia as soluong, CASE WHEN thanhtoan.mathanhtoan = thanhtoan.mathanhtoan THEN 'Đã thanh toán'  END as thanhtoantien FROM mathang, thanhtoan WHERE mathang.mahang = thanhtoan.mahang";
                         ds_thanhtoan.DataSource = ketnoi.docdulieu(sql2);
                         ds_thanhtoan.DataBind();
+
                         if (ds_thanhtoan.Rows.Count == 0)
                         {
                             ds_thanhtoan = null;
-                            thongbao.Text = "Lịch sử thành toán trống !";
+                            thongbao.Text = "Lịch sử thanh toán trống !";
                         }
                     }
                     else
@@ -41,7 +43,7 @@ namespace do_an_thuongmaidientu.admin
 
         protected void loadDB()
         {
-            string sql2 = "SELECT * FROM thanhtoan";
+            string sql2 = "SELECT *, sotien/dongia as soluong, CASE WHEN thanhtoan.mathanhtoan = thanhtoan.mathanhtoan THEN 'Đã thanh toán'  END as thanhtoantien FROM mathang, thanhtoan WHERE mathang.mahang = thanhtoan.mahang";
             ds_thanhtoan.DataSource = ketnoi.docdulieu(sql2);
             ds_thanhtoan.DataBind();
         }

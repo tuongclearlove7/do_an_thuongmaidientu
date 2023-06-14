@@ -28,9 +28,11 @@
     }
         
     </style>
-
+    <div>
+        <h1>LỊCH SỬ THANH TOÁN</h1>
+    </div>
      <br/>
-     <asp:GridView ID="ds_thanhtoan" runat="server" AutoGenerateColumns="false"  >
+     <asp:GridView ID="ds_thanhtoan" runat="server" AutoGenerateColumns="false" >
             <Columns>
                 <asp:TemplateField HeaderText="Xóa">
                       <ItemTemplate>
@@ -41,10 +43,29 @@
                 </asp:TemplateField>
                     <asp:BoundField DataField="mathanhtoan" HeaderText="Mã thanh toán" />
                     <asp:BoundField DataField="tendangnhap" HeaderText="Tên đăng nhập" />
+                    <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />
+                    <asp:BoundField DataField="tenhang" HeaderText="Tên hàng" />
+                    <asp:BoundField DataField="dongia" HeaderText="Đơn giá mặt hàng" />
+                    <asp:BoundField DataField="soluong" HeaderText="Số lưọng" />
                     <asp:BoundField DataField="sotien" HeaderText="Số tiền" />
+                    <asp:BoundField DataField="thanhtoantien" HeaderText="Thanh toán" />
                     <asp:BoundField DataField="thoigian" HeaderText="Thời gian thanh toán" />
             </Columns>
         </asp:GridView>
+
+     <asp:GridView ID="ds_sl" runat="server" AutoGenerateColumns="false" >
+            <Columns>
+                <asp:TemplateField HeaderText="Xóa">
+                      <ItemTemplate>
+                           <asp:TextBox ID="txtmathanhtoan" Visible="false" Text='<%# Eval("mathanhtoan") %>' runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txttendangnhap" Visible="false" Text='<%# Eval("tendangnhap") %>' runat="server"></asp:TextBox>
+                         <asp:Button  ID="btnXoa" CssClass="btn btn-danger" runat="server" Text="Xóa" OnClick="xoa"  CommandArgument='<%# Eval("mathanhtoan") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                    <asp:BoundField DataField="soluong" HeaderText="Số lưọng" />
+            </Columns>
+        </asp:GridView>
+
     <div>
         <asp:Label ID="thongbao" runat="server" Text=""></asp:Label>
     </div>

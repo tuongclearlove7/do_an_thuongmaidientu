@@ -22,13 +22,40 @@ namespace do_an_thuongmaidientu.user {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtmathanhtoan control.
+        /// txtmahang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmathanhtoan;
+        protected global::System.Web.UI.WebControls.TextBox txtmahang;
+        
+        /// <summary>
+        /// ds_thanhtoan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList ds_thanhtoan;
+        
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+        
+        /// <summary>
+        /// txtdongia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtdongia;
         
         /// <summary>
         /// Label2 control.
