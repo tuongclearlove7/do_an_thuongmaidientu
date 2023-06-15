@@ -10,9 +10,12 @@
             animation: titleright 2s;
        
        }
-        table{
+        table , .category{
             margin-left:100px;
         }
+        .category{
+           margin-left:100px;
+         }
 
        td input{
            height:250px;
@@ -85,6 +88,9 @@
     </style>
    
     <div>
+        <div class="category">
+            <h1>DANH MỤC SẢN PHẨM</h1>
+        </div>
          <asp:DataList ID="ds_loaihang"  runat="server">
         <ItemTemplate>
                 <div class="card">
@@ -105,6 +111,7 @@
                     </div>
                   </div>
                 </div>
+          
           </ItemTemplate>
     </asp:DataList>
 

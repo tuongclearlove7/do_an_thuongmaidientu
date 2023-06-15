@@ -39,7 +39,7 @@ namespace do_an_thuongmaidientu.admin
                         if (ds_donhang.Rows.Count == 0)
                         {
                             ds_donhang = null;
-                            tongthanhtien.Text = "Không đơn hàng nào";
+                            tongthanhtien.Text = "Không có đơn hàng nào!";
                         }
                         else
                         {

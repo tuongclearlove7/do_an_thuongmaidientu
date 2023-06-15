@@ -75,6 +75,7 @@
     <Content Include="admin\sua.aspx" />
     <Content Include="admin\them.aspx" />
     <Content Include="admin\themmoi.aspx" />
+    <Content Include="admin\thongtinAdmin.aspx" />
     <Content Include="admin\thongtinUser.aspx" />
     <Content Include="admin\timkiem.aspx" />
     <Content Include="App_Data\quanly_banhang.mdf" />
@@ -84,6 +85,120 @@
     <Content Include="App_Data\quanly_banhang_log.ldf">
       <DependentUpon>quanly_banhang.mdf</DependentUpon>
     </Content>
+    <Content Include="assets\audio\mix_00s %28audio-joiner.com%29.mp3" />
+    <Content Include="assets\css\flexBox.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\Responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\videoJS.css" />
+    <Content Include="assets\css\Zip.css" />
+    <Content Include="assets\img\clients\bs_boder_bgr.svg" />
+    <Content Include="assets\img\clients\bussiness-witht-min.jpg" />
+    <Content Include="assets\img\clients\challenge-content-active.svg" />
+    <Content Include="assets\img\clients\challenge-content.svg" />
+    <Content Include="assets\img\clients\challenge_browse.svg" />
+    <Content Include="assets\img\clients\challenge_browse_active.svg" />
+    <Content Include="assets\img\clients\chevronDown.svg" />
+    <Content Include="assets\img\clients\closeSvg.svg" />
+    <Content Include="assets\img\clients\crown.svg" />
+    <Content Include="assets\img\clients\efficiency-calendar-illustration.jpg" />
+    <Content Include="assets\img\clients\finance_economy.jpg" />
+    <Content Include="assets\img\clients\hear.svg" />
+    <Content Include="assets\img\clients\house.png" />
+    <Content Include="assets\img\clients\lightBulb.svg" />
+    <Content Include="assets\img\clients\like.svg" />
+    <Content Include="assets\img\clients\menuSvg.svg" />
+    <Content Include="assets\img\clients\moon.svg" />
+    <Content Include="assets\img\clients\ncrown.svg" />
+    <Content Include="assets\img\clients\not_Notes.svg" />
+    <Content Include="assets\img\clients\openBook.svg" />
+    <Content Include="assets\img\clients\pngtree-road.png.svg" />
+    <Content Include="assets\img\clients\preLoades.png" />
+    <Content Include="assets\img\clients\Question.svg" />
+    <Content Include="assets\img\clients\search.svg" />
+    <Content Include="assets\img\clients\speakerWave.svg" />
+    <Content Include="assets\img\clients\Stick.svg" />
+    <Content Include="assets\img\clients\stopRed.svg" />
+    <Content Include="assets\img\clients\topRight.svg" />
+    <Content Include="assets\img\clients\toTop.svg" />
+    <Content Include="assets\img\clients\unLike.svg" />
+    <Content Include="assets\img\clients\volDownSvg.svg" />
+    <Content Include="assets\img\clients\volUpSvg.svg" />
+    <Content Include="assets\img\clients\x-circle.svg" />
+    <Content Include="assets\img\family\curtainrap.svg" />
+    <Content Include="assets\img\family\Hai_co_tam.png" />
+    <Content Include="assets\img\family\Hatrang.png" />
+    <Content Include="assets\img\family\screenshot_1662025446.png" />
+    <Content Include="assets\img\family\Screenshot_20210503-120123_Gallery.jpg" />
+    <Content Include="assets\img\family\XuanPhao19.png" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\full_book_3x.png" />
+    <Content Include="assets\img\Slider\6308a6bf603a4.png" />
+    <Content Include="assets\img\Slider\Banner_01_2.png" />
+    <Content Include="assets\img\Slider\Banner_03_youtube.png" />
+    <Content Include="assets\img\Slider\Banner_04_2.png" />
+    <Content Include="assets\img\Slider\Banner_web_ReactJS.png" />
+    <Content Include="assets\img\Small_icon\arrow.svg" />
+    <Content Include="assets\img\Small_icon\bell.svg" />
+    <Content Include="assets\img\Small_icon\blog_item.svg" />
+    <Content Include="assets\img\Small_icon\boockmark.svg" />
+    <Content Include="assets\img\Small_icon\book.svg" />
+    <Content Include="assets\img\Small_icon\bookmark.svg" />
+    <Content Include="assets\img\Small_icon\cards.svg" />
+    <Content Include="assets\img\Small_icon\checked.svg" />
+    <Content Include="assets\img\Small_icon\close.svg" />
+    <Content Include="assets\img\Small_icon\data_image.svg" />
+    <Content Include="assets\img\Small_icon\down.svg" />
+    <Content Include="assets\img\Small_icon\download.svg" />
+    <Content Include="assets\img\Small_icon\house.svg" />
+    <Content Include="assets\img\Small_icon\identification.svg" />
+    <Content Include="assets\img\Small_icon\learn.svg" />
+    <Content Include="assets\img\Small_icon\mute.svg" />
+    <Content Include="assets\img\Small_icon\next.svg" />
+    <Content Include="assets\img\Small_icon\nexted.svg" />
+    <Content Include="assets\img\Small_icon\pause.svg" />
+    <Content Include="assets\img\Small_icon\pauseVideo.svg" />
+    <Content Include="assets\img\Small_icon\play.svg" />
+    <Content Include="assets\img\Small_icon\PlayPause.svg" />
+    <Content Include="assets\img\Small_icon\playPauseVideo.svg" />
+    <Content Include="assets\img\Small_icon\playVideo.svg" />
+    <Content Include="assets\img\Small_icon\previous.svg" />
+    <Content Include="assets\img\Small_icon\Previouslesson.svg" />
+    <Content Include="assets\img\Small_icon\QR_icon.svg" />
+    <Content Include="assets\img\Small_icon\route.svg" />
+    <Content Include="assets\img\Small_icon\stop.svg" />
+    <Content Include="assets\img\team\628c68688aef.png" />
+    <Content Include="assets\img\team\Admin_F8.png" />
+    <Content Include="assets\img\team\F8JSPro.png" />
+    <Content Include="assets\img\team\HTMLCSS.png" />
+    <Content Include="assets\img\team\icon_users.svg" />
+    <Content Include="assets\img\team\JavaScript.png" />
+    <Content Include="assets\img\team\JavaScriptPro.png" />
+    <Content Include="assets\img\team\jsPro.png" />
+    <Content Include="assets\img\team\NodeJS.png" />
+    <Content Include="assets\img\team\QRcodeF8.png" />
+    <Content Include="assets\img\team\ReactJS.png" />
+    <Content Include="assets\img\team\Responsive.png" />
+    <Content Include="assets\img\team\WSL_Ubuntu.png" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\zipProJsCourse.js" />
+    <Content Include="assets\scss\Readme.txt" />
+    <Content Include="assets\vendor\aos\aos.css" />
+    <Content Include="assets\vendor\aos\aos.js" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\vendor\jQuery_v3.6.4.js" />
+    <Content Include="assets\vendor\php-email-form\validate.js" />
+    <Content Include="assets\vendor\responsivevoice.js" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="clome.js" />
+    <Content Include="forms\contact.php" />
+    <Content Include="forms\Readme.txt" />
     <Content Include="Global.asax" />
     <Content Include="homepage.aspx" />
     <Content Include="indexController.aspx" />
@@ -160,6 +275,13 @@
     </Compile>
     <Compile Include="admin\themmoi.aspx.designer.cs">
       <DependentUpon>themmoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\thongtinAdmin.aspx.cs">
+      <DependentUpon>thongtinAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\thongtinAdmin.aspx.designer.cs">
+      <DependentUpon>thongtinAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\thongtinUser.aspx.cs">
       <DependentUpon>thongtinUser.aspx</DependentUpon>
@@ -306,6 +428,7 @@
     <Content Include="master\admin.Master" />
     <Content Include="master\user.Master" />
     <Content Include="master\page.Master" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

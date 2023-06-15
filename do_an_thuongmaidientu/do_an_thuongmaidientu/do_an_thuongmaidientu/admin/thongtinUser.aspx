@@ -37,29 +37,31 @@
         .card-title{
             text-align:center;
         }
-
+        .container-admin{
+            margin-left:120px;
+        }
     
     </style>
-     <div><h2>Thông tin Khách hàng</h2></div>
-    <asp:DataList ID="ds_user" runat="server">
-         <ItemTemplate>
-             <div class="card">
-                <div class="view overlay">
-                    <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" PostBackUrl='<%# "timkiem.aspx?donhang="+ Eval("tendangnhap")%>' ImageUrl='https://cdn-icons-png.flaticon.com/512/1946/1946429.png'/>
-                <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
+    <div class="container-admin">
+         <div><h2>Thông tin Khách hàng</h2></div>
+        <asp:DataList ID="ds_user" runat="server">
+             <ItemTemplate>
+                 <div class="card">
+                    <div class="view overlay">
+                        <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" PostBackUrl='<%# "timkiem.aspx?donhang="+ Eval("tendangnhap")%>' ImageUrl='https://cdn-icons-png.flaticon.com/512/1946/1946429.png'/>
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                    </div>
+                    <div class="card-body">
+                    <h4 class="card-title">
+                        <asp:Label ID="tentaikhoan" CssClass="ten-taikhoan" runat="server" Text='<%# "Khách hàng "+Eval("tendangnhap") %>' />
+                    </h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                    </div>
                 </div>
-                <div class="card-body">
-                <h4 class="card-title">
-                    <asp:Label ID="tentaikhoan" CssClass="ten-taikhoan" runat="server" Text='<%# "Khách hàng "+Eval("tendangnhap") %>' />
-                </h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:DataList>
-
-    
+            </ItemTemplate>
+        </asp:DataList>
+    </div>
 
 </asp:Content>

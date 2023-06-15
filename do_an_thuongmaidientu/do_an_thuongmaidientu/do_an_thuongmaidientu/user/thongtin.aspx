@@ -34,11 +34,15 @@
         .card-title{
             text-align:center;
         }
-
+        .container-user{
+            max-width:100%;
+            margin:0 auto;
+        }
     
     </style>
+    <div class="container-user" >
 
-     <div class="card">
+          <div class="card">
             <div class="view overlay">
                 <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='https://cdn-icons-png.flaticon.com/512/1946/1946429.png'/>
             <a href="#!">
@@ -52,6 +56,8 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
             </div>
         </div>
+    </div>
+   
 
 
 </asp:Content>

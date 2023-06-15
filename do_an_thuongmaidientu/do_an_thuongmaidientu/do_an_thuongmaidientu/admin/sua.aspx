@@ -12,7 +12,9 @@
             max-width: 1280px;
             padding: 35px 20px;
         }
-       
+       .form-control{
+           border:1px solid black;
+       }
     </style>
 
 <div class="them-container">
@@ -39,7 +41,7 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
-     <asp:Button ID="btnsua"  CssClass="btn btn-warning" runat="server" Text="Sửa" OnClick="sua_loaihang" />
+     <asp:Button ID="btnsua"  CssClass="btn btn-primary" runat="server" Text="Sửa" OnClick="sua_loaihang" />
     <br/>
      <br/>
     <asp:DataList ID="ds_mathang"  runat="server">
@@ -67,10 +69,10 @@
              <div class="form-group">
               <asp:Label ID="Label3" runat="server" Text="Hình ảnh"></asp:Label>
                 <asp:TextBox ID="hinh" CssClass="form-control" runat="server" Text='<%# Eval("hinhmathang") %>'></asp:TextBox>
-                <asp:FileUpload ID="FileUpload2" runat="server" />
+               <%-- <asp:FileUpload ID="FileUpload2" runat="server" />--%>
              </div>
             <div>
-                <asp:Button ID="Button1" CssClass="btn btn-warning" runat="server" Text="Sửa" OnClick="sua_mathang" CommandArgument='<%# Container.ItemIndex %>' />
+                <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Sửa" OnClick="sua_mathang" CommandArgument='<%# Container.ItemIndex %>' />
             </div>
         </ItemTemplate>
     </asp:DataList>

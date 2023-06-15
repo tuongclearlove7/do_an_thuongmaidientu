@@ -52,14 +52,17 @@
                 <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
             </Columns>
         </asp:GridView>
+          <br/>
         <div>
             <asp:Label ID="tongthanhtien" runat="server" Text="Label"></asp:Label>
             <asp:Label ID="label_xoa" runat="server" Text=""></asp:Label>
         </div>
     </div>
+    <br/>
     <div>
-        <asp:Button  ID="btnXoa" CssClass="btn btn-danger" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
-        <asp:Button ID="btnsua"  CssClass="btn btn-warning" runat="server" Text="Sửa" OnClick="sua" />
+        <asp:Button  ID="btnXoa" CssClass="btn btn-primary" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
+        <br/>
+        <asp:Button ID="btnsua"  CssClass="btn btn-primary" runat="server" Text="Sửa" OnClick="sua" />
     </div>
 
 </asp:Content>

@@ -9,11 +9,14 @@
        .them-container {
 
             max-width:100%;
-            margin:0px 30px auto;
+            margin:0px 80px auto;
         }
        .themthanhcong{
            color:greenyellow;
            padding-top:30px;
+       }
+       .form-control{
+           border:1px solid black;
        }
     </style>
     
@@ -34,6 +37,7 @@
             <asp:Label ID="Label10" runat="server" Text="Mô tả" ></asp:Label>
             <asp:TextBox ID="mota_loaihang" CssClass="form-control"  runat="server"></asp:TextBox>
         </div>
+        <br/>
         <div>
             <asp:Button ID="Button1" CssClass="btn btn-primary" OnClick="themmoi_loaihang" runat="server" Text="Thêm" />
         </div>
@@ -69,6 +73,7 @@
             <asp:TextBox ID="hinh_mathang" CssClass="form-control" runat="server"></asp:TextBox>
              <asp:FileUpload ID="FileUpload2" runat="server" />
         </div>
+         <br/>
         <div>
             <asp:Button ID="Button2" CssClass="btn btn-primary" OnClick="themmoi_mathang" runat="server" Text="Thêm" />
         </div>

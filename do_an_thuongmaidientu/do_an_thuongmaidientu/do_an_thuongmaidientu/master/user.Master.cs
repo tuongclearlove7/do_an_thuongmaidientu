@@ -21,8 +21,8 @@ namespace do_an_thuongmaidientu.master
         protected void timkiem(object sender, EventArgs e)
         {
 
-            string nhap = nhaptimkiem.Text;
-            Response.Redirect("../user/chi_tiet_mathang.aspx?MatHang=" + nhap);
+           // string nhap = nhaptimkiem.Text;
+            //Response.Redirect("../user/chi_tiet_mathang.aspx?MatHang=" + nhap);
 
         }
 

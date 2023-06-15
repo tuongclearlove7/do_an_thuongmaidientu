@@ -26,7 +26,9 @@
     tr:nth-child(even) {
       background-color: #dddddd;
     }
-        
+         .payment{
+            color: #61c301;
+        }
     </style>
     <div>
         <h1>LỊCH SỬ THANH TOÁN</h1>
@@ -40,7 +42,7 @@
                     <asp:BoundField DataField="dongia" HeaderText="Đơn giá mặt hàng" />
                     <asp:BoundField DataField="soluong" HeaderText="Số lưọng" />
                     <asp:BoundField DataField="sotien" HeaderText="Số tiền" />
-                    <asp:BoundField DataField="thanhtoantien" HeaderText="Thanh toán" />
+                    <asp:BoundField DataField="thanhtoantien" ItemStyle-CssClass="payment" HeaderText="Thanh toán" />
                     <asp:BoundField DataField="thoigian" HeaderText="Thời gian thanh toán" />
             </Columns>
         </asp:GridView>

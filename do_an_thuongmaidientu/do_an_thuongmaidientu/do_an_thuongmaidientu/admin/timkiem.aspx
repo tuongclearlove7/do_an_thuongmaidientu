@@ -33,7 +33,7 @@
             <Columns>
                  <asp:TemplateField HeaderText="Xóa">
                     <ItemTemplate>
-                         <asp:Button  ID="btnXoa" CssClass="btn btn-danger" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
+                         <asp:Button  ID="btnXoa" CssClass="btn btn-primary" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />

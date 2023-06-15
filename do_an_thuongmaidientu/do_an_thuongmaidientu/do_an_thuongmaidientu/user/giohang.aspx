@@ -25,6 +25,9 @@
         tr:nth-child(even) {
           background-color: #dddddd;
         }
+          .payment{
+            color: red;
+        }
     </style>
      <div style="padding-top:0px;">
         <div>
@@ -32,7 +35,7 @@
         </div>
         <div>
             <br/>
-            <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Xóa sửa" Onclick="chuyentrangXoasua" /> 
+            <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Xóa sửa" Onclick="chuyentrangXoasua" /> 
         </div>
         <br/>
          <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" >
@@ -43,14 +46,15 @@
                 <asp:BoundField DataField="dongia" HeaderText="Đơn giá" />
                 <asp:BoundField DataField="soluong" HeaderText="Số lượng" />
                 <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
-                <asp:BoundField DataField="thanhtoan" HeaderText="Thanh toán" />
+                <asp:BoundField DataField="thanhtoantien" ItemStyle-CssClass="payment" HeaderText="Thanh toán" />
                  <asp:TemplateField  HeaderText="Thanh toán">
                     <ItemTemplate>
-                        <asp:Button CssClass="btn btn-success" PostBackUrl='<%#"thanhtoan.aspx?MatHang=" + Eval("mahang") %>' ID="Button2" runat="server" Text="Thanh toán" />
+                        <asp:Button CssClass="btn btn-primary" PostBackUrl='<%#"thanhtoan.aspx?MatHang=" + Eval("mahang") %>' ID="Button2" runat="server" Text="Thanh toán" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+         <br/>
         <div>
             <asp:Label ID="tongthanhtien" runat="server" Text=""></asp:Label>
         </div>

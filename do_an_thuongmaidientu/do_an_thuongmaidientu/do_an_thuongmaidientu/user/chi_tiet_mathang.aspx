@@ -7,11 +7,17 @@
             height:270px;
             width:250px;
         }
-
+        .container-user{
+            margin-left:120px;
+        }
+        .form-control{
+            border:1px solid black;
+        }
     </style>
-     <div>
+
+    <div class="container-user" >
+         <div>
         <h1>Chi tiết mặt hàng</h1>
-        
     </div>
      <asp:DataList ID="ds_mathang" runat="server">
         <ItemTemplate>
@@ -27,17 +33,17 @@
             </div>
              <div>
                  <asp:Label ID="Label4" runat="server" >Số lượng</asp:Label>
-                 <asp:TextBox ID="soluong" runat="server" >
+                 <asp:TextBox CssClass="form-control" ID="soluong" runat="server" >
                  </asp:TextBox>
             </div>
+            <br/>
             <div>
-                <asp:Button ID="Button1" CssClass="btn btn-warning" runat="server" Text="Mua" OnClick="mua" CommandArgument='<%# Container.ItemIndex %>' />
+                <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Mua" OnClick="mua" CommandArgument='<%# Container.ItemIndex %>' />
             </div>
         </ItemTemplate>
     </asp:DataList>
-
-   
-
         <asp:Label ID="hienthi" runat="server" Text=""></asp:Label>
+    </div>
+    
 
 </asp:Content>

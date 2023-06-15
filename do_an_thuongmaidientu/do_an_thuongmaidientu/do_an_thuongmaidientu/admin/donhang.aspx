@@ -25,6 +25,9 @@
     tr:nth-child(even) {
       background-color: #dddddd;
     }
+    .payment{
+        color:red;
+    }
         
     </style>
  
@@ -33,7 +36,7 @@
             <Columns>
                  <asp:TemplateField HeaderText="Xóa">
                       <ItemTemplate>
-                         <asp:Button  ID="btnXoa" CssClass="btn btn-danger" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
+                         <asp:Button  ID="btnXoa" CssClass="btn btn-primary" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />
@@ -50,7 +53,7 @@
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
-                <asp:BoundField DataField="thanhtoantien" HeaderText="Thanh toán"/>
+                <asp:BoundField DataField="thanhtoantien" ItemStyle-CssClass="payment" HeaderText="Thanh toán"/>
             </Columns>
         </asp:GridView>
         <div class="total-money">

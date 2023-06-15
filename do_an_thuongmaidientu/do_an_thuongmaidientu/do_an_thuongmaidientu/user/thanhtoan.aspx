@@ -3,7 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
-
+        .thanhtoan-container{
+            margin-left:70px;
+        }
+        .form-control{
+            border:1px solid black;
+        }
     </style>
      <div class="thanhtoan-container">
      
@@ -33,7 +38,7 @@
             <asp:Label ID="Label3" runat="server" Text="Số tiền" ></asp:Label>
             <asp:TextBox ID="txtsotien" CssClass="form-control"  runat="server"></asp:TextBox>
         </div>
-         
+         <br/>
         <div>
             <asp:Button ID="Button1" CssClass="btn btn-primary" OnClick="thanhtoantien" runat="server" Text="Thanh toán" />
         </div>
