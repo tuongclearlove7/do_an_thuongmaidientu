@@ -1,0 +1,469 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCE3F9A1-E313-44F7-B6BD-24082E21397B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Đồ_ÁN_NHÓM</RootNamespace>
+    <AssemblyName>Đồ_ÁN_NHÓM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\database.mdf" />
+    <Content Include="App_Data\database_log.ldf">
+      <DependentUpon>database.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\audio\mix_00s %28audio-joiner.com%29.mp3" />
+    <Content Include="assets\css\flexBox.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\Responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\videoJS.css" />
+    <Content Include="assets\css\Zip.css" />
+    <Content Include="assets\img\clients\bs_boder_bgr.svg" />
+    <Content Include="assets\img\clients\bussiness-witht-min.jpg" />
+    <Content Include="assets\img\clients\challenge-content-active.svg" />
+    <Content Include="assets\img\clients\challenge-content.svg" />
+    <Content Include="assets\img\clients\challenge_browse.svg" />
+    <Content Include="assets\img\clients\challenge_browse_active.svg" />
+    <Content Include="assets\img\clients\chevronDown.svg" />
+    <Content Include="assets\img\clients\closeSvg.svg" />
+    <Content Include="assets\img\clients\crown.svg" />
+    <Content Include="assets\img\clients\efficiency-calendar-illustration.jpg" />
+    <Content Include="assets\img\clients\finance_economy.jpg" />
+    <Content Include="assets\img\clients\hear.svg" />
+    <Content Include="assets\img\clients\house.png" />
+    <Content Include="assets\img\clients\lightBulb.svg" />
+    <Content Include="assets\img\clients\like.svg" />
+    <Content Include="assets\img\clients\menuSvg.svg" />
+    <Content Include="assets\img\clients\moon.svg" />
+    <Content Include="assets\img\clients\ncrown.svg" />
+    <Content Include="assets\img\clients\not_Notes.svg" />
+    <Content Include="assets\img\clients\openBook.svg" />
+    <Content Include="assets\img\clients\pngtree-road.png.svg" />
+    <Content Include="assets\img\clients\preLoades.png" />
+    <Content Include="assets\img\clients\Question.svg" />
+    <Content Include="assets\img\clients\search.svg" />
+    <Content Include="assets\img\clients\speakerWave.svg" />
+    <Content Include="assets\img\clients\Stick.svg" />
+    <Content Include="assets\img\clients\stopRed.svg" />
+    <Content Include="assets\img\clients\topRight.svg" />
+    <Content Include="assets\img\clients\toTop.svg" />
+    <Content Include="assets\img\clients\unLike.svg" />
+    <Content Include="assets\img\clients\volDownSvg.svg" />
+    <Content Include="assets\img\clients\volUpSvg.svg" />
+    <Content Include="assets\img\clients\x-circle.svg" />
+    <Content Include="assets\img\family\curtainrap.svg" />
+    <Content Include="assets\img\family\Hai_co_tam.png" />
+    <Content Include="assets\img\family\Hatrang.png" />
+    <Content Include="assets\img\family\screenshot_1662025446.png" />
+    <Content Include="assets\img\family\Screenshot_20210503-120123_Gallery.jpg" />
+    <Content Include="assets\img\family\XuanPhao19.png" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\full_book_3x.png" />
+    <Content Include="assets\img\Slider\6308a6bf603a4.png" />
+    <Content Include="assets\img\Slider\Banner_01_2.png" />
+    <Content Include="assets\img\Slider\Banner_03_youtube.png" />
+    <Content Include="assets\img\Slider\Banner_04_2.png" />
+    <Content Include="assets\img\Slider\Banner_web_ReactJS.png" />
+    <Content Include="assets\img\Small_icon\arrow.svg" />
+    <Content Include="assets\img\Small_icon\bell.svg" />
+    <Content Include="assets\img\Small_icon\blog_item.svg" />
+    <Content Include="assets\img\Small_icon\boockmark.svg" />
+    <Content Include="assets\img\Small_icon\book.svg" />
+    <Content Include="assets\img\Small_icon\bookmark.svg" />
+    <Content Include="assets\img\Small_icon\cards.svg" />
+    <Content Include="assets\img\Small_icon\checked.svg" />
+    <Content Include="assets\img\Small_icon\close.svg" />
+    <Content Include="assets\img\Small_icon\data_image.svg" />
+    <Content Include="assets\img\Small_icon\down.svg" />
+    <Content Include="assets\img\Small_icon\download.svg" />
+    <Content Include="assets\img\Small_icon\giohang.jpg" />
+    <Content Include="assets\img\Small_icon\house.svg" />
+    <Content Include="assets\img\Small_icon\identification.svg" />
+    <Content Include="assets\img\Small_icon\learn.svg" />
+    <Content Include="assets\img\Small_icon\mute.svg" />
+    <Content Include="assets\img\Small_icon\next.svg" />
+    <Content Include="assets\img\Small_icon\nexted.svg" />
+    <Content Include="assets\img\Small_icon\pause.svg" />
+    <Content Include="assets\img\Small_icon\pauseVideo.svg" />
+    <Content Include="assets\img\Small_icon\play.svg" />
+    <Content Include="assets\img\Small_icon\PlayPause.svg" />
+    <Content Include="assets\img\Small_icon\playPauseVideo.svg" />
+    <Content Include="assets\img\Small_icon\playVideo.svg" />
+    <Content Include="assets\img\Small_icon\previous.svg" />
+    <Content Include="assets\img\Small_icon\Previouslesson.svg" />
+    <Content Include="assets\img\Small_icon\QR_icon.svg" />
+    <Content Include="assets\img\Small_icon\route.svg" />
+    <Content Include="assets\img\Small_icon\stop.svg" />
+    <Content Include="assets\img\team\628c68688aef.png" />
+    <Content Include="assets\img\team\Admin_F8.png" />
+    <Content Include="assets\img\team\F8JSPro.png" />
+    <Content Include="assets\img\team\HTMLCSS.png" />
+    <Content Include="assets\img\team\icon_users.svg" />
+    <Content Include="assets\img\team\JavaScript.png" />
+    <Content Include="assets\img\team\JavaScriptPro.png" />
+    <Content Include="assets\img\team\jsPro.png" />
+    <Content Include="assets\img\team\NodeJS.png" />
+    <Content Include="assets\img\team\QRcodeF8.png" />
+    <Content Include="assets\img\team\ReactJS.png" />
+    <Content Include="assets\img\team\Responsive.png" />
+    <Content Include="assets\img\team\WSL_Ubuntu.png" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\zipProJsCourse.js" />
+    <Content Include="assets\scss\Readme.txt" />
+    <Content Include="assets\vendor\aos\aos.css" />
+    <Content Include="assets\vendor\aos\aos.js" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\vendor\jQuery_v3.6.4.js" />
+    <Content Include="assets\vendor\php-email-form\validate.js" />
+    <Content Include="assets\vendor\responsivevoice.js" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="forms\contact.php" />
+    <Content Include="forms\Readme.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="khachhang\card.aspx" />
+    <Content Include="khachhang\detail.aspx" />
+    <Content Include="khachhang\error.aspx" />
+    <Content Include="khachhang\history.aspx" />
+    <Content Include="khachhang\home.aspx" />
+    <Content Include="khachhang\info.aspx" />
+    <Content Include="khachhang\payment.aspx" />
+    <Content Include="khachhang\tool.aspx" />
+    <Content Include="layout\footer.ascx" />
+    <Content Include="maychu\add.aspx" />
+    <Content Include="maychu\error.aspx" />
+    <Content Include="maychu\history.aspx" />
+    <Content Include="maychu\home.aspx" />
+    <Content Include="maychu\order.aspx" />
+    <Content Include="maychu\search.aspx" />
+    <Content Include="maychu\userInfo.aspx" />
+    <Content Include="public\css\animation.css" />
+    <Content Include="public\image\error.png" />
+    <Content Include="public\image\hacking-nobg.png" />
+    <Content Include="public\js\script.js" />
+    <Content Include="register.aspx" />
+    <Content Include="trangchu\category.aspx" />
+    <Content Include="trangchu\dangnhap.aspx" />
+    <Content Include="trangchu\error.aspx" />
+    <Content Include="trangchu\home.aspx" />
+    <Content Include="trangchu\login.aspx" />
+    <Content Include="trangchu\register.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\card.aspx.cs">
+      <DependentUpon>card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\card.aspx.designer.cs">
+      <DependentUpon>card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\info.aspx.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\info.aspx.designer.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang\tool.aspx.cs">
+      <DependentUpon>tool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang\tool.aspx.designer.cs">
+      <DependentUpon>tool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="layout\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layout\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layout\khachhang.Master.cs">
+      <DependentUpon>khachhang.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layout\khachhang.Master.designer.cs">
+      <DependentUpon>khachhang.Master</DependentUpon>
+    </Compile>
+    <Compile Include="layout\maychu.Master.cs">
+      <DependentUpon>maychu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layout\maychu.Master.designer.cs">
+      <DependentUpon>maychu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="layout\trangchu.Master.cs">
+      <DependentUpon>trangchu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layout\trangchu.Master.designer.cs">
+      <DependentUpon>trangchu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maychu\userInfo.aspx.cs">
+      <DependentUpon>userInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maychu\userInfo.aspx.designer.cs">
+      <DependentUpon>userInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\connectDB.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu\dangnhap.aspx.cs">
+      <DependentUpon>dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu\dangnhap.aspx.designer.cs">
+      <DependentUpon>dangnhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="layout\khachhang.Master" />
+    <Content Include="layout\maychu.Master" />
+    <Content Include="layout\trangchu.Master" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12394</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12394/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

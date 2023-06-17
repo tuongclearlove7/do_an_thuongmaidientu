@@ -41,6 +41,7 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
+     <br/>
      <asp:Button ID="btnsua"  CssClass="btn btn-primary" runat="server" Text="Sửa" OnClick="sua_loaihang" />
     <br/>
      <br/>
@@ -71,6 +72,7 @@
                 <asp:TextBox ID="hinh" CssClass="form-control" runat="server" Text='<%# Eval("hinhmathang") %>'></asp:TextBox>
                <%-- <asp:FileUpload ID="FileUpload2" runat="server" />--%>
              </div>
+            <br/>
             <div>
                 <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Sửa" OnClick="sua_mathang" CommandArgument='<%# Container.ItemIndex %>' />
             </div>

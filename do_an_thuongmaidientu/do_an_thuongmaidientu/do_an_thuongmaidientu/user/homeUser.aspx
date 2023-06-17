@@ -26,15 +26,18 @@
        .card-img-top{
            width:250px;
        }
-
-    
-
         .card  a{
            height: 30px;
-           width: 70px;
+           width: 100px;
            color:white;
-           text-decoration:none;    
+           text-decoration:underline; 
+            text-underline-position: under;
+            text-underline-offset: 1px;
+           
        }
+         .card  a:hover{
+           text-decoration:underline; 
+        }
         .lop-nut{
             text-align:center;
         }
@@ -44,6 +47,7 @@
         }
         .card-text{
             color :white;
+            height:50px;
         }
 
         #MainContent_DataList1{
@@ -90,9 +94,9 @@
                             <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenhang") %>' />
                             <asp:TextBox ID="maloai" CssClass="form-control" Visible="false" runat="server" Text='<%# Eval("mahang") %>'></asp:TextBox>
                         </h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                        <p class="card-text"><%# Eval("mota") %></p>
                         <div class="lop-nut">
-                            <asp:LinkButton CssClass="btn-link"  runat="server" PostBackUrl='<%# "chi_tiet_mathang.aspx?MatHang=" + Eval("mahang") %>' Text='Xem'>
+                            <asp:LinkButton CssClass="btn-link"  runat="server" PostBackUrl='<%# "chi_tiet_mathang.aspx?MatHang=" + Eval("mahang") %>' Text='VIEW DETAIL'>
                             </asp:LinkButton>
                         </div>
                       </div>

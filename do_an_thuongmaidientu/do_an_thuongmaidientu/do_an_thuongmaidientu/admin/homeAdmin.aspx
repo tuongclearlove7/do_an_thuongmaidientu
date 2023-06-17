@@ -44,6 +44,7 @@
         }
         .card-text{
             color :white;
+            height:80px;
         }
 
         #MainContent_DataList1{
@@ -90,10 +91,10 @@
                             <asp:Label CssClass="ten-loai" runat="server" Text='<%# Eval("tenhang") %>' />
                             <asp:TextBox ID="maloai" CssClass="form-control" Visible="false" runat="server" Text='<%# Eval("mahang") %>'></asp:TextBox>
                         </h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                        <p class="card-text"><%# Eval("mota") %></p>
                         <div class="lop-nut">
                             <asp:Button Width="100px" Height="30px"  ID="Button1" CssClass="btn btn-default" runat="server" Text="Sửa" PostBackUrl='<%# "sua.aspx?MatHang="+Eval("mahang") %>' />
-
+                     
                              <asp:Button Width="100px" Height="30px"  ID="btnXoa" CssClass="btn btn-danger" runat="server" Text="Xóa" OnClick="xoa" CommandArgument='<%# Eval("mahang") %>' />
                         </div>
                       </div>

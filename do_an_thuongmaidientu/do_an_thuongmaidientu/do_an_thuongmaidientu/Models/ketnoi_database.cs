@@ -23,12 +23,6 @@ namespace do_an_thuongmaidientu.Models
             }
         }
 
-        public void connectMongoDB()
-        {
-            string stringCN = "mongodb+srv://Clearlove7:tuongyeuthao1@atlascluster.ffbdvei.mongodb.net/webchat_db_dev";
-
-        }
-
 
         public DataTable docdulieu(string sql)
         {
@@ -72,24 +66,7 @@ namespace do_an_thuongmaidientu.Models
             }
         }
 
-        public DataTable hienthi_bang(string connectionString, string query)
-        {
-            DataTable dataTable = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    connection.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(dataTable);
-                    }
-                    connection.Close();
-                }
-            }
-            return dataTable;
-        }
+      
    
     }
 }

@@ -6,11 +6,12 @@
      <style>
 
        .card{
-           width: 285px;
-            padding: 15px;
-            border: 3px solid black;
-            border-radius: 10px 0px;
-            background-color: #d8d8d8;
+              width: 285px;
+                padding: 15px;
+                color: white;
+                border: 3px solid aqua;
+                border-radius: 10px 0px;
+                background-color: #292929;
        }
        .card-img-top{
            width:250px;
@@ -18,17 +19,17 @@
         .card  a{
            height: 30px;
            width: 70px;
-           color: black;
+           color: white;
            text-decoration:none;    
        }
      
         .ten-taikhoan{
             font-size:20px;
             text-align:center;
-            color: black;
+            color: white;
         }
         .card-text{
-            color: black;
+            color: white;
         }
         .card-title{
             text-align:center;
@@ -42,7 +43,7 @@
     <div class="admin-container">
          <div class="card">
             <div class="view overlay">
-                <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='https://cdn-icons-png.flaticon.com/512/1946/1946429.png'/>
+                <asp:ImageButton ID="ImageButton1" CssClass="card-img-top" runat="server" ImageUrl='../public/image/hacking-nobg.png'/>
             <a href="#!">
                 <div class="mask rgba-white-slight"></div>
             </a>

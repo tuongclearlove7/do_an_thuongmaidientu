@@ -208,6 +208,7 @@
     <Content Include="master\header.ascx" />
     <Content Include="public\css\animation.css" />
     <Content Include="public\image\error.png" />
+    <Content Include="public\image\hacking-nobg.png" />
     <Content Include="public\js\script.js" />
     <Content Include="user\404.aspx" />
     <Content Include="user\chi_tiet_mathang.aspx" />

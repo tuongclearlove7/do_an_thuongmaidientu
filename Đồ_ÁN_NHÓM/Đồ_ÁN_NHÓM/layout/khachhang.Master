@@ -1,0 +1,325 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="khachhang.master.cs" Inherits="Đồ_ÁN_NHÓM.layout.khachhang" %>
+
+<%@ Register Src="~/layout/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head runat="server">
+        <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>THƯƠNG MẠI ĐIỆN TỬ</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+ <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XDl1nDUtHg_4DO0XghwH69TWspVgvJ1tgzslVmTiVDpYjlvOOL0ME1BJphPx7arOeNk&usqp=CAU" rel="icon" />    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+   <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/flexBox.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/Responsive.css" rel="stylesheet" />
+  </head>
+
+ <body>
+      <form id="form1" runat="server">
+    <!-- ======= Header id="navbar" ======= -->
+
+  <header id="header" class="container_fluid header">
+      <div class="header_wrap d-flex align-items-center justify-content-between">
+        <div class="wrapperLogo d-flex align-items-center">
+          <a class="navLogo d-flex align-items-center" href="../khachhang/info.aspx">
+            <div class="headerFooter_logo">
+              <img
+                loading="lazy"
+                id="logo"
+                class="Footer_top-logo d-f-center"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XDl1nDUtHg_4DO0XghwH69TWspVgvJ1tgzslVmTiVDpYjlvOOL0ME1BJphPx7arOeNk&usqp=CAU"
+                alt="F8" />
+            </div>
+
+            <h2 class="actionSlogans" id="logo_Text"><asp:Label ID="account" runat="server" Text=""></asp:Label></h2>
+          </a>
+
+          <div class="circle_progress rotateBgrWrap">
+            <!-- <div class="progress"> -->
+            <div class="rotateBgr"></div>
+            <span>100%</span>
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <div class="navBody d-flex">
+          <div class="Search_wrapper d-flex align-items-center">
+           
+             <div>
+                  <asp:TextBox ID="nhaptimkiem" style="background:none;border:none;" CssClass="form-control" runat="server" Placeholder="Nhập vào tên đăng nhập" ></asp:TextBox>
+              </div>
+             
+          </div>
+            <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Tìm kiếm" />
+        </div>
+
+           <asp:Button CssClass="btn btn-primary" ID="Button3" runat="server" OnClick="dangxuat" Text="Đăng xuất" />
+      </div>
+    </header>
+    <!-- End Header -->
+
+   <main id="main">
+      <div class="myPage container_fluid d-in-flex align-items-start justify-content-start">
+        <!-- ======= sidebar column ======= -->
+        <div class="sidebar f-column gap12 align-items-center">
+          <div class="new_blogBtn d-f-center">
+            <a href="../khachhang/card.aspx" data-gallery="portfolioGallery" class="Xuan_Phao d-f-center">
+              <img class="write_blog_img" src="../assets/img/Small_icon/close.svg" alt="" />
+            </a>
+            <div class="write_blog dropDown"></div>
+          </div>
+
+
+          <div class="Sidebar_list f-column align-items-center">
+            <ul class="f-column gap4 align-items-center">
+              <li>
+                <a class="f-column" href="../khachhang/home.aspx">
+                  <img class="my_house Sidebar_list_img" src="../assets/img/Small_icon/house.svg" alt="Nha cua toi" />
+
+                  <span>HOME</span>
+                </a>
+              </li>
+            <li>
+                 <a class="f-column" href="../khachhang/card.aspx">
+                  <img class="my_house Sidebar_list_img" src="../assets/img/Small_icon/house.svg" alt="Nha cua toi" />
+
+                  <span>CARD</span>
+                </a>
+              </li>
+
+                   <li>
+               <a class="f-column" href="../khachhang/info.aspx">
+                  <img class="my_house Sidebar_list_img" src="../assets/img/Small_icon/house.svg" alt="Nha cua toi" />
+
+                  <span>INFO</span>
+                </a>
+              </li>
+
+              <li>
+                 <a class="f-column" href="../khachhang/history.aspx">
+                  <img class="my_house Sidebar_list_img" src="../assets/img/Small_icon/house.svg" alt="Nha cua toi" />
+
+                  <span>HISTORY</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <!-- The end sidebar column -->
+
+        <div class="mainContent f-column">
+          <section id="hero" class="hero_section">
+            <!-- ======= Hero Section Testimonials ======= -->
+            <div class="" data-aos="zoom-in" data-aos-delay="200">
+              <div class="hero_slider swiper">
+                <div class="swiper-wrapper">
+                  <!-- slider testimonial item -->
+                  <div class="swiper-slide">
+                    <div class="Slideshow_wrap">
+                      <div
+                        class="Slideshow"
+                        style="
+                          --slide-hover-color: #6828fa;
+                          background: linear-gradient(to right, rgb(104, 40, 250), rgb(255, 186, 164));
+                        ">
+                        <div class="Slideshow_left">
+                          <h2>
+                            <a
+                              class="title"
+                              rel="noreferrer noopener noreferrer"
+                              target="_blank"
+                              href="https://fullstack.edu.vn/landing/htmlcss">
+                              WEBSITE THƯƠNG MẠI ĐIỆN TỬ
+
+                              <span class="Slideshow_crownIcon">
+                                <img src="./assets/img/clients/crown.svg" alt="" />
+                              </span>
+                            </a>
+                          </h2>
+
+                          <p class="description">
+                            Đây là website thương mại điện tử trên Internet!
+                          </p>
+
+                          <div>
+                            <a
+                              rel="noreferrer noopener noreferrer"
+                              class="btn d-in-flex"
+                              target="_blank"
+                              href="https://fullstack.edu.vn/landing/htmlcss">
+                              Tìm hiểu thêm
+                            </a>
+
+                            <a
+                              href="https://www.youtube.com/embed/CbUjGxnJiVo"
+                              class="btn glightbox btn_watch_video gap12 align-items-center">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="transparent"
+                                viewBox="0 0 24 24"
+                                stroke-width="1"
+                                stroke="#0f0"
+                                class="w-6 h-6">
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+                              </svg>
+                              <span>Watch Video</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="Slideshow_right">
+                          <a
+                            rel="noreferrer noopener noreferrer"
+                            target="_blank"
+                            href="https://fullstack.edu.vn/landing/htmlcss">
+                            <img
+                              class="Slideshow_img"
+                              src="https://files.fullstack.edu.vn/f8-prod/banners/20/6308a6bf603a4.png"
+                              alt="DANH MỤC SẢN PHẨM"
+                              title="DANH MỤC SẢN PHẨM" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End testimonial item -->
+
+                  <div class="swiper-slide">
+                    <div class="Slideshow_wrap">
+                      <div
+                        class="Slideshow"
+                        style="
+                          --slide-hover-color: #2877fa;
+                          background: linear-gradient(to right, rgb(40, 119, 250), rgb(103, 23, 205));
+                        ">
+                        <div class="Slideshow_left">
+                          <h2>
+                            <a
+                              class="title"
+                              rel="noreferrer noopener noreferrer"
+                              target="_self"
+                              href="proJavaScripCourse.html">
+                              HỌC ReactJS GIÁ SIỂU RẺ
+                            </a>
+                          </h2>
+
+                          <p class="description">
+                            Khóa học ReactJS từ cơ bản tới nâng cao. Kết quả của khóa học này là bạn có thể làm hầu hết
+                            các dự án thường gặp với ReactJS.
+                          </p>
+
+                          <div>
+                            <a
+                              rel="noreferrer noopener noreferrer"
+                              class="btn d-in-flex"
+                              target="_blank"
+                              href="proJavaScripCourse.html">
+                              Đăng ký ngay
+                            </a>
+
+                            <a
+                              href="https://www.youtube.com/embed/x0fSBAgBrOQ"
+                              class="btn glightbox btn_watch_video gap12 align-items-center">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="transparent"
+                                viewBox="0 0 24 24"
+                                stroke-width="1"
+                                stroke="#0f0"
+                                class="w-6 h-6">
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+                              </svg>
+                              <span>Watch Video</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="Slideshow_right">
+                          <a rel="noreferrer noopener noreferrer" target="_blank" href="proJavaScripCourse.html">
+                            <img
+                              class="Slideshow_img"
+                              src="https://files.fullstack.edu.vn/f8-prod/banners/Banner_web_ReactJS.png"
+                              alt="Khoá học ReactJS online tại F8"
+                              title="Học ReactJS Miễn Phí!" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End testimonial item -->
+
+               
+                  <!-- End testimonial item -->
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="swiperContronl">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+               <section id="Featured_Posts" class="your_List featuredPosts container_fluid">
+          </section>
+          <!-- End Featured Posts -->
+
+          <!-- ======= Featured Videos Section ======= -->
+          
+          <!-- End Videos -->
+     </div>
+      </div>
+    </main>
+    <!-- End #main -->
+    </form>
+    <!-- ======= Footer ======= -->
+     <uc1:footer runat="server" id="footer" />
+   
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/jQuery_v3.6.4.js"></script>
+    <script src="../assets/vendor/responsivevoice.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script async src="https://cse.google.com/cse.js?cx=040d0df0e4a2f46b2"></script>
+    <!-- Nơi mặt trời trên đỉnh núi kiêu hãnh reo vang -->
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
+

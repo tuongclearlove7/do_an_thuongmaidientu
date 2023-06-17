@@ -19,7 +19,7 @@ namespace do_an_thuongmaidientu.admin
                 {
                     if(Session["tendangnhap"].ToString() == "admin")
                     {
-                        string sql = "select * from loaihang, mathang where loaihang.maloai = mathang.maloai";
+                        string sql = "select * from mathang";
                         ds_mathang.DataSource = ketnoi.docdulieu(sql);
                         ds_mathang.DataBind();
                     }
