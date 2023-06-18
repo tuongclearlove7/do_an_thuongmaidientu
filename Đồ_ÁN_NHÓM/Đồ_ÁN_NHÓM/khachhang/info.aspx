@@ -8,8 +8,7 @@
        .card{
            width: 285px;
             padding: 15px;
-            border: 3px solid black;
-            border-radius: 10px 0px;
+            border: 3px solid white;
             background-color: #d8d8d8;
        }
        .card-img-top{
