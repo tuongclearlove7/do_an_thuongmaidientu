@@ -32,20 +32,11 @@ body {
 }
 
 .logo {
-    width: 80px;
-    margin: 20px 115px 30px auto;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
 }
 
-.logo img {
-    width: 100%;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0px 0px 3px #5f5f5f,
-        0px 0px 0px 5px #ecf0f3,
-        8px 8px 15px #a7aaa7,
-        -8px -8px 15px #fff;
-}
+
 
 .wrapper .name {
     font-weight: 600;
@@ -106,7 +97,7 @@ body {
 </style>
 <div class="wrapper">
         <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XDl1nDUtHg_4DO0XghwH69TWspVgvJ1tgzslVmTiVDpYjlvOOL0ME1BJphPx7arOeNk&usqp=CAU" alt="">
+            <img width="40px" src="https://media.loveitopcdn.com/3807/logo-apple-1.png" alt="">
         </div>
        
         <form class="p-3 mt-3">

@@ -23,6 +23,8 @@
            border: 1px solid black;
            border-radius: 10px;
            background: white;
+           height: 400px;
+           
        }
        .card-img-top{
                width: 150px;
@@ -35,7 +37,7 @@
            text-decoration:underline; 
             text-underline-position: under;
             text-underline-offset: 1px;
-           
+            
        }
          .card  a:hover{
            text-decoration:underline; 

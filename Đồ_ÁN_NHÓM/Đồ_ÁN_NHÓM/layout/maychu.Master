@@ -12,13 +12,13 @@
     </asp:ContentPlaceHolder>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>THƯƠNG MẠI ĐIỆN TỬ</title>
+    <title> WEBSITE BUÔN BÁN ĐỒ ĐIỆN TỬ</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XDl1nDUtHg_4DO0XghwH69TWspVgvJ1tgzslVmTiVDpYjlvOOL0ME1BJphPx7arOeNk&usqp=CAU" rel="icon" />
-    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="https://media.loveitopcdn.com/3807/logo-apple-1.png" rel="icon" />
+    <link href="https://media.loveitopcdn.com/3807/logo-apple-1.png" rel="apple-touch-icon" />
     <!-- Google Fonts -->
   <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -49,7 +49,7 @@
                 loading="lazy"
                 id="logo"
                 class="Footer_top-logo d-f-center"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3XDl1nDUtHg_4DO0XghwH69TWspVgvJ1tgzslVmTiVDpYjlvOOL0ME1BJphPx7arOeNk&usqp=CAU"
+                src="https://media.loveitopcdn.com/3807/logo-apple-1.png"
                 alt="F8" />
             </div>
 
@@ -154,7 +154,7 @@
                               rel="noreferrer noopener noreferrer"
                               target="_blank"
                               href="https://fullstack.edu.vn/landing/htmlcss">
-                              WEBSITE THƯƠNG MẠI ĐIỆN TỬ
+                               WEBSITE BUÔN BÁN ĐỒ ĐIỆN TỬ
 
                               <span class="Slideshow_crownIcon">
                                 <img src="./assets/img/clients/crown.svg" alt="" />

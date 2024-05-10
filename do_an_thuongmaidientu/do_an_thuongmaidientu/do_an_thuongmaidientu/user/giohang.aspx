@@ -47,12 +47,19 @@
                 <asp:BoundField DataField="soluong" HeaderText="Số lượng" />
                 <asp:BoundField DataField="thanhtien" HeaderText="Thành tiền" />
                 <asp:BoundField DataField="thanhtoantien" ItemStyle-CssClass="payment" HeaderText="Thanh toán" />
+
+
                  <asp:TemplateField  HeaderText="Thanh toán">
                     <ItemTemplate>
                         <asp:Button CssClass="btn btn-primary" PostBackUrl='<%#"thanhtoan.aspx?MatHang=" + Eval("mahang") %>' ID="Button2" runat="server" Text="Thanh toán" />
                     </ItemTemplate>
                 </asp:TemplateField>
+            
+            
+            
             </Columns>
+
+
         </asp:GridView>
          <br/>
         <div>

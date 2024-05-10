@@ -42,6 +42,8 @@
         </div>
         <br/>
          <asp:GridView ID="ds_donhang" runat="server" AutoGenerateColumns="false" >
+
+
             <Columns>
                 <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />
                 <asp:BoundField DataField="tenhang" HeaderText="Tên hàng" />
@@ -56,6 +58,8 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
+
+
         </asp:GridView>
          <br/>
         <div>

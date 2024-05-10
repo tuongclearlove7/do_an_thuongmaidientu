@@ -152,7 +152,10 @@
                                    <asp:TextBox ID="txt_hinhloaihang" Text='<%# Eval("hinhloaihang") %>' runat="server"></asp:TextBox>
                                 </p>
                                   <div>
-                                       <asp:Button Width="100px" Height="30px"  ID="btnXoa" CssClass="button-1" runat="server" Text="DELETE" OnClick="xoaloaihang" CommandArgument='<%# Eval("maloai") %>' />
+                                       <asp:Button Width="100px" Height="30px"  
+                                           ID="btnXoa" CssClass="button-1" runat="server" Text="DELETE" 
+                                           OnClick="xoaloaihang"
+                                           CommandArgument='<%# Eval("maloai") %>' />
                                   </div>
                               </div>
                             </div>
@@ -192,7 +195,10 @@
                             <asp:TextBox ID="txt_dongia" Text='<%#Eval("dongia") %>' runat="server"></asp:TextBox>
                         </p>
                             <div class="lop-nut">
-                                 <asp:Button Width="100px" Height="30px"  ID="btnXoa_mathang" CssClass="button-1" runat="server" Text="DELETE" OnClick="xoamathang" CommandArgument='<%# Eval("mahang") %>' />
+                                 <asp:Button Width="100px" Height="30px"  
+                                     ID="btnXoa_mathang" CssClass="button-1" 
+                                     runat="server" Text="DELETE" OnClick="xoamathang" 
+                                     CommandArgument='<%# Eval("mahang") %>' />
                             </div>
                       </div>
                     </div>

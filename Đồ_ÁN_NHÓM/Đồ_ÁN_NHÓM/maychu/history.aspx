@@ -44,6 +44,7 @@
      <br/>
      <asp:GridView  ID="ds_thanhtoan" runat="server" AutoGenerateColumns="false" >
             <Columns>
+                
                 <asp:TemplateField HeaderText="Xóa">
                       <ItemTemplate>
                            <asp:TextBox ID="txtmathanhtoan" Visible="false" Text='<%# Eval("mathanhtoan") %>' runat="server"></asp:TextBox>
@@ -51,6 +52,7 @@
                          <asp:Button  ID="btnXoa" CssClass="btn btn-primary" runat="server" Text="Xóa" OnClick="xoa"  CommandArgument='<%# Eval("mathanhtoan") %>' />
                     </ItemTemplate>
                 </asp:TemplateField>
+
                     <asp:BoundField DataField="mathanhtoan" HeaderText="Mã thanh toán" />
                     <asp:BoundField DataField="tendangnhap" HeaderText="Tên đăng nhập" />
                     <asp:BoundField DataField="mahang" HeaderText="Mã hàng" />

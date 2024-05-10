@@ -23,6 +23,7 @@
            border: 1px solid black;
            border-radius: 10px;
            background: white;
+            height: 400px;
        }
        .card-img-top{
                width: 150px;
